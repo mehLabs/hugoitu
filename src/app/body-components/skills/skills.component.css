@@ -1,0 +1,110 @@
+h2{
+    text-align: center;
+}
+
+.card{
+    padding: 1rem;
+}
+
+.card-body{
+    padding: 1rem 0;
+}
+.card-header{
+    text-align: center;
+}
+
+.container{
+    padding: 1rem;
+}
+
+.html{
+    width: 90%;
+}
+.css{
+    width: 75%;
+}
+.javascript{
+    width: 55%;
+}
+.json{
+    width: 30%;
+}
+.bootstrap{
+    width: 50%;
+}
+.python{
+    width: 30%;
+}
+.maven{
+    width: 10%;
+}
+.auth0{
+    width: 45%;
+}
+.typescript{
+    width: 45%;
+}
+.angular{
+    width: 60%;
+}
+.http-requests{
+    width: 20%;
+}
+.git{
+    width: 40%;
+}
+.servlets{
+    width: 45%;
+}
+.tomcat{
+    width: 10%;
+}
+.sockets{
+    width: 5%;
+}
+.apirest{
+    width: 35%;
+}
+.ruby{
+    width: 45%;
+}
+.mysql{
+    width: 60%;
+}
+.spring-boot{
+    width: 40%;
+}
+.firebase{
+    width: 35%;
+}
+.heroku{
+    width: 35%;
+}
+.pascal{
+    width: 40%;
+}
+.java{
+    width: 60%;
+}
+.programacion-orientada-objetos{
+    width: 75%;
+}
+.english{
+    width: 75%;
+}
+
+.progress .progress-bar.aparece{
+    animation: alargamiento 1s reverse;
+    animation-timing-function: ease-in;
+}
+
+.green{
+    background-color: green !important;
+    transition: 1s;
+}
+
+@keyframes alargamiento {
+    100%{
+        width: 0;
+    }
+}

@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
+
+.container .title{
+    transition: 1s;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 25rem;
+    background-color: var(--main-bg-color);
+    border: 5px solid var(--bs-blue);
+}
+.container .title:hover{
+    transition: 1s;
+    background-color: black;
+    border-color: black;
+    box-shadow: 0 0 1rem black;
+}
+.container .title:hover h1{
+    transition: 1s;
+    color:white;
+}
+.title h1{
+    z-index: 99;
+}
+
+.container .title:after{
+    transition: 1s;
+    position: absolute;
+    content: '';
+    height: 6rem;
+    width: calc(25rem - 10px);
+    background-color: var(--main-bg-color);
+}
+
+.container .title:hover:after{
+    transition: 1s;
+    width: 0;
+}

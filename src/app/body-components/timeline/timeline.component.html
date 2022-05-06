@@ -1,0 +1,153 @@
+<aside class="aside" [id]="(size992 ? 'timeline' : '')">
+    <div class="accordion" id="accordionTimeline">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTimeline">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTimeline" aria-expanded="false" aria-controls="collapseTimeline">
+              <h6>Línea de tiempo</h6>
+            </button>
+          </h2>
+          <div id="collapseTimeline" class="accordion-collapse collapse collapsed" aria-labelledby="headingTimeline" data-bs-parent="#accordionTimeline">
+            <div class="accordion-body p-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>Línea de tiempo</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div id="content">
+                                        <ul class="timeline" id="listaFechas">
+                                            <li class="event" data-date="21 de Abril de 1998">
+                                                <h3>Nací</h3>
+                                                <p>De muy buenos padres en Bahía Blanca, Buenos Aires, Argentina. 🇦🇷</p>
+                                            </li>
+                                            <li class="event" data-date="2000-2003">
+                                                <h3>Empecé el Jardín de infantes</h3>
+                                                <p>No recuerdo mucho 👀</p>
+                                            </li>
+                                            <li class="event" data-date="2004-2009">
+                                                <h3>Empecé la primaria</h3>
+                                                <p>Solía tener buenas notas, solo necesitaba escuchar en clase y estudiar en el recreo antes de los exámenes
+                                                    para que me vaya bien
+                                                </p>
+                                            </li>
+                                            <li class="event" data-date="2010-2016">
+                                                <h3>Empecé la secundaria</h3>
+                                                <p>Fui un alumno regular. Ni muy estudioso ni tampoco un vago que no tenía interes por nada.
+                                                    <div class="accordion" id="accordionSecondary">
+                                                        <div class="accordion-item">
+                                                          <h2 class="accordion-header" id="headingSecondary">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecondary" aria-expanded="false" aria-controls="collapseSecondary">
+                                                              Experiencia de vida
+                                                            </button>
+                                                          </h2>
+                                                          <div id="collapseSecondary" class="accordion-collapse collapse" aria-labelledby="headingSecondary" data-bs-parent="#accordionSecondary">
+                                                            <div class="accordion-body">
+                                                                <p>
+                                                                    <strong>TLDR: Usé la teoría de einstein sin que jamás la vieramos en clase.</strong>
+                                                                    <br><br>
+                                                                    Tengo un recuerdo de una prueba de física para la que no había estudiado. Debía utilizar fórmulas de movimiento
+                                                                    rectilíneo que no recordaba. Un problema decía: "hay 2 autos en movimiento en distintos puntos de inicio a distintas velocidades."
+                                                                    La pregunta era cuánto tiempo tardaría el auto que estaba más atrasado, en alcanzar al auto que empezó más adelante.
+                                                                    <br>
+                                                                    Al no recordar la fórmula pensé y pensé, hasta que se me ocurrió que en la práctica, veía que cuando andaba en auto era
+                                                                    como estar quieto, mientras los autos más rápidos nos pasaban y parecía que andaban lento. Resté las velocidades e hice que el auto 
+                                                                    más lento estuviera andando a "0km/h". El profesor me dijo que utilicé la teoría de la relatividad y se sorprendió,
+                                                                    me puso 1 punto extra que me ayudó a alcanzar el 7.
+                                                                </p>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    
+                                            </li>
+                                            <li class="event" data-date="2017-2019">
+                                                <h3>Misionero Voluntario</h3>
+                                                <p>Servicio voluntario de 2 años.
+                                                </p>
+                                                <a href="#misionero" class="btn btn-primary">Ver detalles</a>
+                                            </li>
+                                            <li class="event" data-date="Agosto 2019 - Noviembre 2019">
+                                                <h3>Ingreso a la Universidad Nacional del Sur</h3>
+                                                <p>
+                                                    Luego de 2 años sin estudiar nada secular, me puse las pilas y logré pasar el ingreso rindiendo libre.
+                                                    <br><br>
+                                                    Tuve un duro cuatrimestre.
+                                                    <br>
+                                                    Resolución de problemas y algoritmos e introducción a la programación orientada a objetos (con JAVA)
+                                                    fueron materias que amé y en las que aprendí con mucho gusto y facilidad.
+                                                </p>
+                                                <a href="#uns" class="btn btn-primary">Ver detalles</a>
+                                            </li>
+                                            <li class="event" data-date="Diciembre 2019 - Febrero 2020">
+                                                <h3>Churros el Topo</h3>
+                                                <p>
+                                                    Trabajé en la playa para tener algo de dinero para comprarme una computadora y poder programar en casa
+                                                </p>
+                                                <a href="#churros" class="btn btn-primary">Ver detalles</a>
+                                            </li>
+                                            <li class="event" data-date="Marzo 2020">
+                                                <h3>Inicio de la pandemia</h3>
+                                                <p>
+                                                    Como muchos, caí en un pozo depresivo. 
+                                                    <br><br>
+                                                     En mi caso sentía que mi vida estaba estancada sin poder trabajar
+                                                    ni estudiar. En este tiempo forjé mi espíritu y le propuse matrimonio a mi novia.
+                                                </p>
+                                            </li>
+                                            <li class="event" data-date="Octubre 2020 - Abril 2021">
+                                                <h3>Empleado de Tiro Paintball</h3>
+                                                <a href="#paintball" class="btn btn-primary">Ver detalles</a>
+                                            </li>
+                                            <li class="event" data-date="Abril 2021 - Hoy">
+                                                <h3>Camillero en un hospital</h3>
+                                                <p>
+                                                    Un trabajo muy noble que agradezco mucho porque me permite vivir.    
+                                                </p>
+                                                <a href="#camillero" class="btn btn-primary">Ver detalles</a>
+                                            </li>
+                                            <li class="event" data-date="1 de Agosto 2021 - 1 Noviembre">
+                                                <h3>Argentina programa</h3>
+                                                <p>
+                                                    Empecé y terminé la primera etapa.
+                                                </p>
+                                                <a href="#argprograma" class="btn btn-primary">Ver detalles</a>
+                                            </li>
+                                            <li class="event" data-date="5 de Noviembre 2021">
+                                                <h3>Casamiento</h3>
+                                                <p>
+                                                    Me casé con la mujer de mis sueños, con quien le daremos pelea a esta vida.  
+                                                </p>
+                                            </li>
+                                            <li class="event" data-date="1 Febrero 2022">
+                                                <h3>Segunda Etapa Argentina Programa</h3>
+                                                <p>
+                                                    Estoy en esta segunda etapa que termino en Agosto. Los invito a ver el programa:  
+                                                </p>
+                                                <a target="_blank" rel="noopener" href="https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa" class="btn btn-primary">Ver programa</a>
+                                            </li>
+                                            <li class="event" data-date="HOY">
+                                                <h3><strong>BUSCANDO TRABAJO</strong></h3>
+                                                <p>
+                                                    SIII, ESTOY DISPONIBLE! Estoy mandando mails, tirando CV, ya me están llegando algunos exámenes para hacer. Sé que tengo nula experiencia laboral
+                                                    pero les prometo que yo puedo aprender lo que sea necesario de manera realmente veloz. Me doy cuenta que hay muchísimas tecnologías para aprender
+                                                    y si hablan conmigo pidiéndome que aprenda alguna tecnología en X tiempo, les aseguro que puedo (siempre y cuando sea un tiempo al menos realista).  
+                                                </p>
+                                                <a href="#" class="btn btn-primary">Descargar currículum</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    
+</aside>
+<button id="toggle" (click)="onClick()" class="toggle left">
+    <i class="bi bi-chevron-left"></i>
+</button>

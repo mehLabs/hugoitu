@@ -1,0 +1,63 @@
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav .nav-tabs{
+    background-color: rgb(118, 146, 235);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    
+}
+
+nav .navbar-nav{
+    padding: 0.5rem;
+}
+
+.nav-items{
+    border-radius: 2px;
+}
+
+.nav-tabs .nav-link{
+    color: white;
+    user-select: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+
+.nav-tabs .nav-link.active{
+    color: black;
+}
+
+.nav-link.active:active{
+    color:rgb(189, 181, 34);
+}
+
+
+.navbar-toggler-icon{
+    color:black;
+}
+
+@media (min-width: 992px){
+    nav{
+        position:fixed;
+        z-index: 100;
+    }
+    .navbar{
+        padding-top: 0;
+    }
+    .navbar-nav{
+        width:95vw;
+        box-shadow: 0 0 5px 0px rgb(50, 85, 131);
+    }
+    .nav-tabs{
+        border: none;
+    }
+    .login-btn{
+        position: absolute;
+        right: 5vw;
+    }
+    #timeline-link{
+        display: none;
+    }
+}

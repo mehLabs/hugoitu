@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: var(--main-bg-color);
+    overflow-x: hidden;
+}
+
+:root{
+    --main-bg-color: rgb(204, 213, 243);
+}
+

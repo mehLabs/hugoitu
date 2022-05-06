@@ -1,0 +1,15 @@
+@media (min-width: 992px){
+    .scrollspy{
+        transition: 1.5s;
+        width: 63vw;
+    }
+    #home.expand{
+        transition: 1.5s;
+        width: 97vw;
+    }
+
+    app-timeline{
+        overflow: hidden;
+    }
+}
+

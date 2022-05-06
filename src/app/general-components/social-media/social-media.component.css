@@ -1,0 +1,36 @@
+.container{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    z-index: 101;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+i{
+    font-size: 2rem;
+}
+a{
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    div.container{
+        position:fixed;
+        top: 5px;
+        right: 10rem;
+        background-color: transparent;
+        width: 15rem;
+    }
+    a{
+        color: white;
+    }
+
+}
