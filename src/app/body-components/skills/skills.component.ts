@@ -8,9 +8,12 @@ import { DOCUMENT } from '@angular/common';
 })
 export class SkillsComponent implements OnInit {
   document:any;
+  detailed:boolean = false;
+  opcionales:any;
   constructor() { }
 
   ngOnInit(): void {
+    this.opcionales = document.querySelectorAll(".optional");
     var barras = document.querySelectorAll('.progress-bar');
     var altura = window.innerHeight;
 
@@ -20,6 +23,8 @@ export class SkillsComponent implements OnInit {
       for(let i=0;i<barras.length;i++){
       
       let distancia = barras[i].getBoundingClientRect().top;
+
+      
       if (distancia <= altura){
           barras[i].classList.add('aparece');
       }else{
@@ -43,6 +48,20 @@ export class SkillsComponent implements OnInit {
       }
     },1000)
     
+  }
+
+  detallado(){
+    this.detailed = !this.detailed;
+
+    if (this.detailed){
+      for (let element of this.opcionales){
+        element.classList.remove("optional");
+      }
+    }else{
+      for (let element of this.opcionales){
+        element.classList.add("optional")
+      }
+    }
   }
 }
 

@@ -7,4 +7,9 @@
 
 .accordion{
     width: 100%;
+    display: none;
+}
+
+.accordion.show{
+    display: block;
 }

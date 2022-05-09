@@ -8,3 +8,14 @@
 .card{
     margin-bottom: 1rem;
 }
+
+.hide{
+    display: none !important;
+}
+
+.optional{
+    margin: 1rem 3rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+}

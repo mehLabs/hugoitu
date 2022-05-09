@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './body-components/about/about.component';
@@ -14,6 +17,8 @@ import { TimelineComponent } from './body-components/timeline/timeline.component
 import { ScrollSpyDirective } from './body-directives/scroll-spy.directive';
 import { HomeComponent } from './body-components/home/home.component';
 import { SocialMediaComponent } from './general-components/social-media/social-media.component';
+import { ScrollTopBtnComponent } from './general-components/scroll-top-btn/scroll-top-btn.component';
+import { WelcomeComponent } from './body-components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +33,15 @@ import { SocialMediaComponent } from './general-components/social-media/social-m
     TimelineComponent,
     ScrollSpyDirective,
     HomeComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    ScrollTopBtnComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTooltipModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css'; 
 body{
     background-color: var(--main-bg-color);
     overflow-x: hidden;
@@ -6,5 +7,10 @@ body{
 
 :root{
     --main-bg-color: rgb(204, 213, 243);
+    --main-blue-color: rgb(118, 146, 235);
+    --main-blue-shadow: rgba(82, 101, 163, 0.507);
 }
 
+.btn-primary{
+    background-color: var(--main-blue-color)
+}

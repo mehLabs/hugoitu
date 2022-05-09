@@ -8,15 +8,31 @@ import { EventEmitter } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
   @Output() collapseButton = new EventEmitter();
-
+  
+  detailed:boolean = false;
+  opcionales:any;
   public size992 = true;
   toggleTl = true;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.opcionales = document.querySelectorAll(".optional");
     if(window.innerWidth < 992){
       this.size992=false
+    }
+  }
+
+  detallado(){
+    this.detailed = !this.detailed;
+    if (this.detailed){
+      for (let element of this.opcionales){
+        element.classList.remove("optional")
+      }
+    }else{
+      for (let element of this.opcionales){
+        element.classList.add("optional")
+      }
     }
   }
 

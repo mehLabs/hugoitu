@@ -1,0 +1,31 @@
+#scroll-top-btn{
+    bottom: 3.5rem;
+    z-index: 101;
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    transform: translateX(4rem);
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: 0px;
+    right: 1rem;
+    border-radius: 50%;
+}
+
+#scroll-top-btn.aparece{
+    transition: 1s;
+    transform: translateX(0);
+    display: flex !important;
+
+    
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.411);
+}
+
+i{
+    color: var(--main-blue-color);
+    font-size: 2rem;
+}

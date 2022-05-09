@@ -93,6 +93,22 @@ h2{
     width: 75%;
 }
 
+.progress{
+    display: flex;
+}
+
+.progress-bar{
+    background-color:  var(--main-blue-color)
+}
+
+.progress.optional{
+    display: none !important;
+}
+
+h4.optional{
+    display: none !important;
+}
+
 .progress .progress-bar.aparece{
     animation: alargamiento 1s reverse;
     animation-timing-function: ease-in;

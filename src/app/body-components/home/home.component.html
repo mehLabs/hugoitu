@@ -1,6 +1,14 @@
 <div class="container">
-    <div class="title">
+    <app-welcome></app-welcome>
 
+    <div id="title" class="title">
         <h1>HUGO ITURRIETA</h1>
+    </div>
+    <div id="resumeButton" class="btn-long-short">
+        <label class="switch">
+            <input (click)="check()" type="checkbox">
+            <span class="slider round"></span>
+            <span class="underline"></span>
+          </label>
     </div>
 </div>

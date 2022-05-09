@@ -1,5 +1,5 @@
 .timeline {
-    border-left: 3px solid #727cf5;
+    border-left: 3px solid var(--main-blue-color);
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     background: rgba(114, 124, 245, 0.09);
@@ -24,6 +24,11 @@
 
 #accordionTimeline.accordion{
     margin: 5rem 0;
+    margin-bottom: 0;
+}
+
+.optional{
+    display: none !important;
 }
 
 .toggle{
@@ -120,7 +125,7 @@
 
 @media (min-width: 992px){
     .aside{
-        position: absolute;
+        position: fixed;
         right: 0;
         top: -20px;
         width: 35vw;
@@ -146,6 +151,9 @@
     #collapseTimeline{
         transition: 1.5s;
         background-color: white;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     #collapseTimeline.collapsed{
         transition: 1.5s;
@@ -181,9 +189,9 @@
         display: flex;
         position: fixed;
         top:50vh;
-        right: calc(35vw - 0.75rem);
-        width: 1.5rem;
-        height: 1.5rem;
+        right: calc(35vw - 1.75rem);
+        width: 3rem;
+        height: 3rem;
         justify-content: center;
         background-color: white;
         border-radius: 50%;
@@ -193,7 +201,7 @@
     .toggle.left{
         position: fixed;
         transition: 1.5s;
-        right: calc(1vw - 0.8rem);
+        right: calc(1vw - 1.5rem);
         transform: rotate(0);
     }
     .toggle:active{
@@ -201,6 +209,7 @@
     }
     
     .toggle i::before{
-        transform: translateY(-1px);
+        font-size: 2rem;
+        transform: translate(-0.3rem,0.5rem);
     }
 }
