@@ -1,6 +1,8 @@
 .container{
     padding: 1rem;
-
+}
+.container h2{
+    text-align: center;
 }
 .row{
     display: flex;
@@ -8,12 +10,13 @@
 }
 
 .container .card{
-    margin: 1rem;
+    margin: 0 1rem;
     max-width: 90vw;
 }
 
 #portfolio, #pec{
-    width: 80vw;
+    width: auto;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -36,7 +39,7 @@ a{
     gap: 0.5rem;
     flex-wrap: wrap;
 }
-.tags .tag{
+.tag{
     padding: 0.1rem 0.75rem;
     border-radius: 1.5rem;
     background-color: var(--main-blue-color);
@@ -55,17 +58,18 @@ a{
 
     
     #portfolio{
-    width: 60vw;
-    height: 30vw;
-    transform: translateX(-25%) rotate(45deg);
-    object-fit: cover;
+        width: -webkit-fill-available;
+        height: 400px;
+        object-position: center;
+        object-fit:cover;
     }
 
     #pec{
         width: auto;
-        height: 30vw;
-        transform: rotate(45deg);
-        object-fit:none;
+        height: 400px;
+        margin: 0 auto;
+        transform: rotate(30deg);
+        object-fit:contain;
     }
 
 

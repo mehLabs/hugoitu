@@ -1,49 +1,35 @@
 <section id="about">
-    <div class="content">
-        <h2>Acerca de mí</h2>
-        <p>
-            ¡Hola! Estoy muy agradecido de que hayas visitado mi página web, usted es una buena persona 😀
-            <br>
-            <br>
-            <strong>#TLDR:</strong> Tengo 24 años, casado, soy responsable, muy centrado y comprometido. Estoy muy entusiasmado por trabajar en IT, y por CRECER, esforzarme y alcanzar mis sueños.
-        </p>
+    <div class="container">
+        <h2>{{data.title}}</h2>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              {{data.content.p1}}
+              <br><br>
+              {{data.content.p2}}
+            </p>
+          </div>
+        </div>
             <div class="accordion" id="accordionAbout">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      ¡Me gustaría saber el resto!
+                      {{data.content.p3}}
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionAbout">
                     <div class="accordion-body">
                         <p>
-                            Soy un joven de 24 años (cumplo años el <a href="#">21 de Abril</a>) <!-- TODO mostrar cuántos días faltan para mi cumple -->
-                            muy entusiasmado por crecer y aprender. Desde muy chico <strong>me interesa la tecnología</strong>, solía ser
-                            el amigo que traía noticias interesantes, contando sobre algo nuevo que se estaba desarrollando, algo que las noticias no
-                            cubrían, como cuando Google empezó a hablar de Google Glass, o cuando salió Oculus Rift, fui el que les explicó
-                            qué era la Inteligencia Artificial y les mostró un chatbot que ahora es un clásico (CleverBot).
-                            El último año, cuando debimos hacer una presentación de nuestras "tesinas", un grupo de alumnos tenía dinero y compró
-                            un control inalámbrico para pasar las diapositivas. Se me ocurrió usar mi teléfono, investigué algunas apps en inglés
-                            y cuando la encontré, la configuré con mi netbook y les ayudé a todos los grupos a tener la app y el programa instalados
-                            para poder pasar diapositivas con el teléfono.
+                            {{data.content.p4}}
                             <br>
                             <br>
-                            Me encantaría contarles sobre mí en una entrevista, pero si les gustaría saber un poco ahora, me recibí a los 18 
-                            años de una escuela técnica como <strong>Técnico Químico</strong>, luego de lo cual serví 2 años como misionero 
-                            voluntario.
+                            {{data.content.p5}}
                             <br>
                             <br>
-                            Al volver empecé a estudiar Ingeniería en Sistemas y dije "SÍ, ESTO ES LO MÍO", arrasé en las materias de 
-                            programación y al poco tiempo empezó la pandemia, en ese tiempo trabajé y me casé. Hoy en día no puedo asistir a
-                            la universidad porque el trabajo tiene horarios que chocan con la cursada, pero soy muy autodidacta y me inscribí
-                            en un programa del estado llamado "Argentina Programa", en el que me aceptaron, luego aprobé la primera etapa que
-                            duró 4 meses. Ahora estoy en la segunda y última etapa, en la que en caso de aprobar recibiría el certificado de
-                            "Full-Stack Developer Junior".
+                            {{data.content.p6}}
                             <br>
                             <br>
-                            ¡Estoy MUY entusiasmado por tener mi primer trabajo en IT! Mi esposa puede testificar que estoy mañana, tarde y noche
-                            estudiando y adelantando mis propios proyectos esperando el día en que tenga mi primera oportunidad laboral (que entiendo, 
-                            es muy distinto a lo que aprendí en la uni, en mis cursos y por mí mismo).
+                            {{data.content.p7}}
                         </p>
                     </div>
                   </div>

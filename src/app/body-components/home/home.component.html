@@ -1,14 +1,12 @@
 <div class="container">
-    <app-welcome></app-welcome>
-
-    <div id="title" class="title">
-        <h1>HUGO ITURRIETA</h1>
+    <div id="title" class="title" (click)="setDarkMode()">
+        <h1>{{data.name}}</h1>
     </div>
-    <div id="resumeButton" class="btn-long-short">
+    <div id="resumeButton" class="btn-long-short" [ngClass]="spanish ? 'spanish' : 'english' ">
         <label class="switch">
-            <input (click)="check()" type="checkbox">
+            <input placeholder="Activar modo resumido" (click)="check()" type="checkbox">
             <span class="slider round"></span>
             <span class="underline"></span>
-          </label>
+        </label>
     </div>
 </div>

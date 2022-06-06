@@ -12,8 +12,10 @@
 .hide{
     display: none !important;
 }
-
 .optional{
+    text-align: center;
+}
+.optional p{
     margin: 1rem 3rem;
     padding: 1rem;
     background-color: white;

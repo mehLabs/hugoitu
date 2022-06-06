@@ -1,0 +1,9 @@
+{
+    "title":"Login",
+    "content":{
+        "p1":"This is the login in order to get access to modify the page. If you don't have an account, please go back.",
+        "email":"Email",
+        "password":"Password",
+        "login":"Login"
+    }
+}

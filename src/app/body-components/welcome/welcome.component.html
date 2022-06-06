@@ -3,22 +3,24 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="welcomeModalLabel">¡Hola, sea bienvenido/a!</h5>
+        <h5 class="modal-title" id="welcomeModalLabel">{{data.title}}</h5>
+        <div class="d-flex lang">
+          <app-lang></app-lang>
+        </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Usted está viendo el portafolio de Hugo Iturrieta. A continuación podrá ver sus habilidades, estudios, proyectos,
-            etc. 
+        
+        <p *ngFor="let paragraph of data.content">
+          {{paragraph.p}}
             <br>
-            Si tiene alguna pregunta, él con gusto le responderá. 
-            <br>
-            <a href="mailto:hugoiturrietadeveloper@gmail.com">hugoiturrietadeveloper@gmail.com</a>
         </p>
+        <a [href]="data.link.mailto">{{data.link.mail}}</a>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Gracias, seguir viendo portafolio</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{data.button}}</button>
       </div>
     </div>
   </div>
 </div>
-<button id="openModalButton" [hidden]="true" data-bs-toggle="modal" data-bs-target="#welcomeModal">Open Modal</button>
+<button id="openModalButton" class="hidden" [hidden]="true" data-bs-toggle="modal" data-bs-target="#welcomeModal">Open Modal</button>

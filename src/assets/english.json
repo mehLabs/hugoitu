@@ -1,0 +1,233 @@
+{
+    "home":{
+        "name":"Hugo Iturrieta"
+    },
+    "detailed":{
+        "detailed":"Detailed",
+        "resumed":"Summarized"
+    },
+    "about":{
+        "title":"About",
+        "content":{
+            "p1":"Hello! I'm very grateful for you visiting my wepage 😀",
+            "p2":"Here there's a junior developer waiting for his first opportunity to develop his abilities to the point of being capable of teaching and leading others. Autonomous, proactive, self-taught, with good interpersonal abilities, goal oriented person. Colaborative teammate with lots of experience working with teams and setting goals and plans.",
+            "p3":"I'd like to know more!",
+            "p4":"I am a young man of 24 years old (my birthday is April 21st) very excited to grow and learn. Since I was a kid I have been interested in technology, I used to be the friend who brought interesting news, telling about something new that was being developed, something that the news didn't cover, like when Google started talking about Google Glass, or when Oculus Rift came out, I was the one who explained what Artificial Intelligence was and showed them a chatbot that is now a classic (CleverBot). Last year, when we had to make a presentation of our 'dissertations', a group of students had money and bought a wireless controller to show the slides. I came up with the idea to use my phone, researched some apps in English and when I found it, I set it up with my netbook and helped all the groups to have the app and program installed so they could show slides with the phone.",
+            "p5":"I would love to tell you about myself in an interview, but if you would like to know a little bit now, I graduated at 18 from a technical school as a Chemical Technician, after which I served 2 years as a volunteer missionary.",
+            "p6":"When I came back I started to study Systems Engineering and I said 'YES, THIS IS MINE', I aced my programming subjects and soon after the pandemic started, at that time I worked and got married. Nowadays I can't attend the university because my work has schedules that clash with the courses, but I am very self-taught and I enrolled in a state program called 'Argentina Program', in which I was accepted, then I passed the first stage that lasted 4 months. Now I am in the second and last stage, in which in case of passing I would receive the certificate of 'Full-Stack Developer Junior'.",
+            "p7":"I'm VERY excited to have my first job in IT! My wife can testify that I am morning, afternoon and night studying and advancing my own projects waiting for the day when I will have my first job opportunity (which I understand, is very different from what I learned at uni, in my courses and by myself)."
+        }
+    },
+    "skills":{
+        "title":"Abilities",
+        "content":{
+            "p1":"Self-taught",
+            "p2":"Argentina Programa (argentinian course sponsored by the goverment)",
+            "p3":"University",
+            "p4":"Object-Oriented programming"
+        }
+    },
+    "education":{
+        "title":"Education",
+        "content":{
+            "cards":[{
+                "id":"argprograma",
+                "optional":"false",
+                "school":"Instituto Nacional de Tecnología Industrial (INTI)",
+                "title":"Junior Full-Stack Developer",
+                "content":"I approved first stage,  I'm coursing the second one that finishes around August",
+                "btns":[{
+                    "title":"First stage certificate",
+                    "url":"https://mumuki.io/argentina-programa/certificates/verify/2AW1DsgW9Pd_ms-C"
+                },{
+                    "title":"Web page",
+                    "url":"https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa"
+                }]
+            },
+            {
+                "id":"uns",
+                "optional":"false",
+                "school":"Universidad Nacional del Sur",
+                "title":"Systems Engineering",
+                "content":"I started at the end of 2019, I had excelent progress in programming subjects. I'm stuck right now due to work schedule.",
+                "btns":[{
+                    "title":"Web page",
+                    "url":"https://servicios.uns.edu.ar/grado/plan.asp?dependen=16&carrera=181"
+                }]
+            },
+            {
+                "id":"secundaria",
+                "optional":"true",
+                "school":"Escuela técnica N°4 'Antártida' - Bahía Blanca",
+                "title":"Chemical Technicial",
+                "content":"I had a school average of 7.9. My project was 'Potabilitation of sea water through electrodialysis'"
+            }
+            ]
+        }
+    },
+    "experience":{
+        "title":"Laboral Experience",
+        "content":{
+            "cards":[{
+                "business":"Hospital Privado del Sur (FUMEBA)",
+                "title":"Stretcher bearer",
+                "begin":"April 2021",
+                "end":"Now",
+                "content":[{
+                    "p":"I worked transporting, movilizing and transporting patients in wheelchairs and stretches, teamworking with nurses, stretcher bearers and medics. The job requieres lots of Soft Skills like responsability and phisical effort. I learned to work under very heavy pressure."
+                }]
+            },{
+                "business":"Tiro Paintball",
+                "title":"Public attention",
+                "begin":"October 2020",
+                "end":"April 2021",
+                "content":[{
+                    "p":"I learned very quickly everything about paintball, including repairing markers and giving safety talks to new clients before every game. I used to control the match, recharging markers and writing what eachone consumed. We cleaned with bleach and we followed the covid protocol."
+                }]
+            },{
+                "business":"Churros El Topo, Monte Hermoso",
+                "title":"Cook and beach vendor",
+                "begin":"December 2019",
+                "end":"February 2020",
+                "content":[{
+                    "p":"I was hired for the high season. I worked very high pressure in the kitchen. We worked in team to cook everything in time. I selled in the beach and I wad an excelent money management, even recognized by the boss."
+                }]
+            },{
+                "business":"The Church of Jesus Christ of Latter-day Saints",
+                "title":"Voluntary service (Chiclayo - Perú)",
+                "begin":"May 2017",
+                "end":"May 2019",
+                "content":[
+                    {"p":"The most hard and rewarding job in my life, I paid for all my time in Perú. I learned to work with a companion, teach lessons, do communitary service. I worked with Americans, Canadians, Peruvians, Bolivians, Mexicans, Colombians, Venezolans, Philipins and Brazilians."},
+                    {"p":"We worked very goal oriented, with plans and personal, groupal and mission goals. We had a mission president (an older person that was in charge of every young missioanry) that trusted so much in me and putted me in charge of the biggest missionary group (18 missionaries) that was 6 hours away."},
+                    {"p":"I learned diligence, identify myself with my job and to be responsible."}]
+                    
+                }],
+            "optional":{
+                "title":"Work Experience",
+                "content":"I don't have work experience relevant to IT yet, but if you want to see all my jobs you can activate the detailed mode."
+            }
+        }
+    },
+    "projects":{
+        "title":"My projects",
+        "content":{
+            "cards":[{
+                "title":"My portfolio",
+                "url":"#",
+                "content":[{"p":"This page is where I save my public contact and my projects"}],
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/portafolio.webp?alt=media",
+                "imgtitle":"Hugo's portfolio",
+                "tags":[{
+                    "title":"Angular",
+                    "optional":"false"
+                },{
+                    "title":"Typescript",
+                    "optional":"true"
+                },{
+                    "title":"CSS",
+                    "optional":"true" 
+                },{
+                    "title":"Bootstrap",
+                    "optional":"false" 
+                },{
+                    "title":"Firebase",
+                    "optional":"true" 
+                },{
+                    "title":"JSON",
+                    "optional":"true" 
+                }],
+                "links":[{
+                    "title":"Github",
+                    "url":"https://github.com/mehLabs/hugoitu"
+                }]
+            },
+            {
+                "title":"'Pensando en Casa' E-commerce",
+                "content":[{
+                        "p":"A webpage for a client that wanted to have presence in the internet for his new business that sells furnitures, mattresses, etc."
+                    },{
+                        "p":"It's not finished yet, we're working mainly in the backend and in the payment method using an API",
+                        "optional":"true"
+                    },{
+                        "p":"The webpage is -for now- designed only for phones, when I finish the important things I'll finish the UI for computers.",
+                        "optional":"true"
+                    }],
+                "url":"https://storification-5a9f7.web.app",
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/pensandoencasa.webp?alt=media",
+                "img-title":"Pensando en Casa",
+                "tags":[{
+                    "title":"Angular",
+                    "optional":"false"
+                },{
+                    "title":"Javascript",
+                    "optional":"true"
+                },{
+                    "title":"Typescript",
+                    "optional":"true"
+                },{
+                    "title":"CSS",
+                    "optional":"true"
+                },{
+                    "title":"Bootstrap",
+                    "optional":"true"
+                },{
+                    "title":"Firebase",
+                    "optional":"true"
+                },{
+                    "title":"Java",
+                    "optional":"false"
+                },{
+                    "title":"Spring Boot",
+                    "optional":"false"
+                },{
+                    "title":"Hibernate",
+                    "optional":"true"
+                },{
+                    "title":"Heroku",
+                    "optional":"true"
+                },{
+                    "title":"MySQL",
+                    "optional":"false"
+                },{
+                    "title":"Auth0",
+                    "optional":"true"
+                }],
+                "links":[{
+                    "title":"link",
+                    "url":"https://storification-5a9f7.web.app/home"
+                },{
+                    "title":"Github",
+                    "url":"https://github.com/mehLabs/Storification"
+                }]
+            }]
+        }
+    },
+    "navbar":{
+        "home":"Home",
+        "about":"About",
+        "skills":"Abilites",
+        "education":"Education",
+        "experience":"Experience",
+        "projects":"Projects",
+        "timeline":"Timeline"
+    },
+    "welcome":{
+        "title":"Welcome! Hello there!",
+        "content":[{
+            "p":"You are watching Hugo Iturrieta's portfolio. Hereunder you will be able to see my abilities, studies, projects, etc."
+        },{
+            "p":"If you have any question, he'll be glad to answer it to you."
+        }],
+        "link":{
+            "mailto":"mailto:hugoiturrietadeveloper@gmail.com",
+            "mail":"hugoiturrietadeveloper@gmail.com"
+        },
+        "button":"Thanks. Continue."
+    },
+    "loginbtn":{
+        "login":"Login",
+        "logout":"Logout"
+    },
+    "footer":"Created with ❤ by Hugo Iturrieta."
+}

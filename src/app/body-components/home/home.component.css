@@ -3,27 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20rem;
     min-height: calc(100vh - 50px - 3rem);
 }
 
 .container .title{
-    transition: 1s;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;
-    width: 25rem;
-    background-color: var(--main-bg-color);
-    border: 5px solid var(--main-blue-color);
+  transition: 1s;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  width: 25rem;
+  border: 5px solid var(--main-blue-color);
 }
-.container .title.animate{
+.container .title:hover{
     transition: 2.5s;
-    background-color: var(--main-blue-color);
+    background-color: var(--main-dark-color);
+    border: 5px solid var(--main-dark-color);
     box-shadow: 0 0 1rem black;
 }
-.container .title.animate h1{
+.container .title:hover h1{
     transition: 1s;
     color:white;
 }
@@ -40,9 +42,17 @@
     background-color: var(--main-bg-color);
 }
 
-.container .title.animate:after{
+.container .title:hover:after{
     transition: 1s;
     width: 0;
+}
+.container .title:hover::before{
+  transition: 0.5s;
+  content: 'Dark mode';
+  color: var(--main-bg-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .btn-long-short{
@@ -63,23 +73,35 @@
   box-shadow:0.25rem 0.25rem 5px 0 rgba(185, 185, 185, 0.466);
 }
 
-.btn-long-short:before{
-    content: "Resumido";
+.btn-long-short.english:before{
+    content: "Summary";
     text-align: right;
     left: 0;
     padding: 0 0.3rem;
 }
 
-.btn-long-short:after{
-    content: "Detallado";
+.btn-long-short.english:after{
+    content: "Exhaustive";
     text-align: left;
     right: 0;
     padding: 0 0.3rem;
 }
+.btn-long-short.spanish:before{
+  content: "Resumido";
+  text-align: right;
+  left: 0;
+  padding: 0 0.3rem;
+}
+
+.btn-long-short.spanish:after{
+  content: "Detallado";
+  text-align: left;
+  right: 0;
+  padding: 0 0.3rem;
+}
 
 .switch {
     position: relative;
-    display: inline-block;
     width: 60px;
     height: 34px;
   }
@@ -159,8 +181,12 @@
 
 @media (min-width: 992px){
   .btn-long-short.fixed{
+    top: 0;
     margin-top: 4px;
-    right: 1rem;
-    box-shadow:0.25rem 0.25rem 5px 0 rgba(243, 243, 243, 0.301);
+    right: 16rem;
+    box-shadow:0.25rem 0.25rem 5px 0 rgba(44, 44, 44, 0.301);
+  }
+  .btn-long-short{
+    top: 4rem;
   }
 }

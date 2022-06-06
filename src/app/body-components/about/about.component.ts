@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { DataService } from 'src/app/body-services/data.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  data:any = '';
 
-  constructor() { }
+  constructor(private dataS: DataService) { }
 
   ngOnInit(): void {
+    this.dataS.dlPortfolioText().subscribe(data => {
+      this.data = data.about;
+      this.dataS.checkLoaded();
+    })
   }
 
 }

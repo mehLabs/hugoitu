@@ -1,0 +1,9 @@
+{
+    "title":"Inicio de sesión",
+    "content":{
+        "p1":"Este es el inicio de sesión para modificar la página, si no tiene cuenta, por favor vuelva.",
+        "email":"Correo electrónico",
+        "password":"Contraseña",
+        "login":"Iniciar sesión"
+    }
+}

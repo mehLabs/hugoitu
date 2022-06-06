@@ -1,16 +1,1 @@
-<div class="scrollspy expand" id="home">
-
-    <header>
-      <app-navbar></app-navbar>
-  </header>
-  <app-home (detallado)="detailed($event)"></app-home>
-  <app-about></app-about>
-  <app-skills></app-skills>
-  <app-education></app-education>
-  <app-experience></app-experience>
-  <app-projects></app-projects>
-  <div class="login"></div>
-  <app-timeline (collapseButton)="expand($event)"></app-timeline>
-  <app-footer></app-footer>
-  <app-scroll-top-btn></app-scroll-top-btn>
-</div>
+<router-outlet></router-outlet>

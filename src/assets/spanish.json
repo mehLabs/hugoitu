@@ -1,0 +1,232 @@
+{
+    "home":{
+        "name":"Hugo Iturrieta"
+    },
+    "detailed":{
+        "detailed":"Detallado",
+        "resumed":"Resumido"
+    },
+    "about":{
+        "title":"Acerca de mí",
+        "content":{
+            "p1":"¡Hola! Estoy muy agradecido de que hayas visitado mi página web 😀",
+            "p2":"Aquí un desarrollador junior esperando su primera oportunidad laboral para desarrollar sus habilidades al punto de ser capaz de enseñar y dirigir a otros. Persona autónoma, proactiva, autodidacta, con buen manejo de habilidades interpersonales y orientado a objetivos. Compañero de trabajo colaborativo, con mucha experiencia trabajando en equipo y fijando metas y planes.",
+            "p3":"¡Me gustaría saber el resto!",
+            "p4":"Soy un joven de 24 años (cumplo años el 21 de Abril muy entusiasmado por crecer y aprender. Desde muy chico me interesa la tecnología, solía ser el amigo que traía noticias interesantes, contando sobre algo nuevo que se estaba desarrollando, algo que las noticias no cubrían, como cuando Google empezó a hablar de Google Glass, o cuando salió Oculus Rift, fui el que les explicó qué era la Inteligencia Artificial y les mostró un chatbot que ahora es un clásico (CleverBot). El último año, cuando debimos hacer una presentación de nuestras 'tesinas', un grupo de alumnos tenía dinero y compró un control inalámbrico para pasar las diapositivas. Se me ocurrió usar mi teléfono, investigué algunas apps en inglés y cuando la encontré, la configuré con mi netbook y les ayudé a todos los grupos a tener la app y el programa instalados para poder pasar diapositivas con el teléfono.",
+            "p5":"Me encantaría contarles sobre mí en una entrevista, pero si les gustaría saber un poco ahora, me recibí a los 18 años de una escuela técnica como Técnico Químico, luego de lo cual serví 2 años como misionero voluntario.",
+            "p6":"Al volver empecé a estudiar Ingeniería en Sistemas y dije 'SÍ, ESTO ES LO MÍO', arrasé en las materias de programación y al poco tiempo empezó la pandemia, en ese tiempo trabajé y me casé. Hoy en día no puedo asistir a la universidad porque el trabajo tiene horarios que chocan con la cursada, pero soy muy autodidacta y me inscribí en un programa del estado llamado 'Argentina Programa', en el que me aceptaron, luego aprobé la primera etapa que duró 4 meses. Ahora estoy en la segunda y última etapa, en la que en caso de aprobar recibiría el certificado de 'Full-Stack Developer Junior'.",
+            "p7":"¡Estoy MUY entusiasmado por tener mi primer trabajo en IT! Mi esposa puede testificar que estoy mañana, tarde y noche estudiando y adelantando mis propios proyectos esperando el día en que tenga mi primera oportunidad laboral (que entiendo, es muy distinto a lo que aprendí en la uni, en mis cursos y por mí mismo)."
+        }
+    },
+    "skills":{
+        "title":"Habilidades",
+        "content":{
+            "p1":"Autodidacta",
+            "p2":"Argentina Programa",
+            "p3":"Universidad",
+            "p4":"Programacion Orientada a Objetos"
+        }
+    },
+    "education":{
+        "title":"Educación",
+        "content":{
+            "cards":[{
+                "id":"argprograma",
+                "optional":"false",
+                "school":"Instituto Nacional de Tecnología Industrial (INTI)",
+                "title":"Full-Stack Developer Junior",
+                "content":"Aprobé la primera etapa, estoy cursando la segunda que termina alrededor de Agosto",
+                "btns":[{
+                    "title":"Certificado primera etapa",
+                    "url":"https://mumuki.io/argentina-programa/certificates/verify/2AW1DsgW9Pd_ms-C"
+                },{
+                    "title":"Página web",
+                    "url":"https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa"
+                }]
+            },
+            {
+                "id":"uns",
+                "optional":"false",
+                "school":"Universidad Nacional del Sur",
+                "title":"Ingeniería en Sistemas",
+                "content":"Inicié a fines del 2019, tuve excelentes progresos en materias de programación. Estoy estancado debido a horarios laborales",
+                "btns":[{
+                    "title":"Página web",
+                    "url":"https://servicios.uns.edu.ar/grado/plan.asp?dependen=16&carrera=181"
+                }]
+            },
+            {
+                "id":"secundaria",
+                "optional":"true",
+                "school":"Escuela técnica N°4 'Antártida' - Bahía Blanca",
+                "title":"Técnico Químco",
+                "content":"Terminé con un promedio de 7,9. Mi proyecto fue 'Potabilización del agua de mar mediante electrodiálisis'"
+            }
+            ]
+        }
+    },
+    "experience":{
+        "title":"Experiencia laboral",
+        "content":{
+            "cards":[{
+                "business":"Hospital Privado del Sur (FUMEBA)",
+                "title":"Camillero",
+                "begin":"Abril 2021",
+                "end":"Ahora",
+                "content":[{
+                    "p":"Trabajé llevando movilizando y transportando pacientes en silla de ruedas y en camilla, trabajando en equipo con enfermeros, camilleros y médicos. El trabajo requiere mucha responsabilidad y esfuerzo físico. Aprendí a trabajar bajo altísima presión."
+                }]
+            },{
+                "business":"Tiro Paintball",
+                "title":"Atención al público",
+                "begin":"Octubre 2020",
+                "end":"Abril 2021",
+                "content":[{
+                    "p":"Aprendí rápidamente todo lo relacionado con el paintball, incluso a reparar marcadoras y dar charlas de seguridad a los clientes nuevos antes de cada juego. Dirigía juegos, cargaba marcadoras y anotaba lo que cada persona consumía. Limpiábamos con lavandina y seguíamos el protocolo covid."
+                }]
+            },{
+                "business":"Churros El Topo, Monte Hermoso",
+                "title":"Cocinero y vendedor",
+                "begin":"Diciembre 2019",
+                "end":"Febrero 2020",
+                "content":[{
+                    "p":"Nos contrataron por la temporada en la playa. Trabajamos bajo presión en la cocina y trabajamos en equipo para cocinar todas las cosas a tiempo. Vendí en la playa y tuve un excelente manejo del dinero reconocido por la dueña del lugar."
+                }]
+            },{
+                "business":"La Iglesia de Jesucristo de los Santos de los Últimos Días",
+                "title":"Servicio voluntario (Chiclayo - Perú)",
+                "begin":"Mayo 2017",
+                "end":"Mayo 2019",
+                "content":[
+                    {"p":"El trabajo más difícil y recompensante de mi vida, servicio que pagué con mi dinero. Aprendí a trabajar con un compañero, enseñar lecciones, hacer servicio comunitario. Trabajé con estadounidenses, canadienses, peruanos, bolivianos, mexicanos, colombianos, venezolanos, filipinos y brasileños."},
+                    {"p":"Trabajábamos muy orientados a objetivos, con planes y metas personales, en grupo y como misión. Teníamos un presidente de misión (una persona mayor que está encargada de todos los misioneros jóvenes) que confiaba mucho en mí y me puso a cargo del grupo de misioneros más grande (18 misioneros) que estaba a 6 horas de viaje de distancia."},
+                    {"p":"Aprendí diligencia, a identificarme con mi trabajo y responsabilidad."}]
+                }],
+            "optional":{
+                "title":"Experiencia Laboral",
+                "content":"Aún no poseo experiencia laboral relevante para sistemas, pero si quiere ver todos los trabajos que he tenido, puede activar el modo detallado."
+            }
+        }
+    },
+    "projects":{
+        "title":"Mis proyectos",
+        "content":{
+            "cards":[{
+                "title":"Mi portafolio",
+                "url":"#",
+                "content":[{"p":"Esta página es donde guardo mis contactos públicos y mis proyectos"}],
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/portafolio.webp?alt=media",
+                "imgtitle":"Portafolio de Hugo",
+                "tags":[{
+                    "title":"Angular",
+                    "optional":"false"
+                },{
+                    "title":"Typescript",
+                    "optional":"true"
+                },{
+                    "title":"CSS",
+                    "optional":"true" 
+                },{
+                    "title":"Bootstrap",
+                    "optional":"false" 
+                },{
+                    "title":"Firebase",
+                    "optional":"true" 
+                },{
+                    "title":"JSON",
+                    "optional":"true" 
+                }],
+                "links":[{
+                    "title":"Github",
+                    "url":"https://github.com/mehLabs/hugoitu"
+                }]
+            },
+            {
+                "title":"Pensando en Casa E-commerce",
+                "content":[{
+                        "p":"Una página para un cliente que quiere tener presencia online en su nuevo negocio de venta de muebles, colchones, etc."
+                    },{
+                        "p":"Aún no está finalizada, estamos trabajando principalmente el backend y el sistema de pagos usando una API",
+                        "optional":"true"
+                    },{
+                        "p":"El frontend está diseñado actualmente solo para teléfonos, cuando termine lo más importante voy a terminar la interfaz para computadoras.",
+                        "optional":"true"
+                    }],
+                "url":"https://storification-5a9f7.web.app",
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/pensandoencasa.webp?alt=media",
+                "img-title":"Pensando en Casa",
+                "tags":[{
+                    "title":"Angular",
+                    "optional":"false"
+                },{
+                    "title":"Javascript",
+                    "optional":"true"
+                },{
+                    "title":"Typescript",
+                    "optional":"true"
+                },{
+                    "title":"CSS",
+                    "optional":"true"
+                },{
+                    "title":"Bootstrap",
+                    "optional":"true"
+                },{
+                    "title":"Firebase",
+                    "optional":"true"
+                },{
+                    "title":"Java",
+                    "optional":"false"
+                },{
+                    "title":"Spring Boot",
+                    "optional":"false"
+                },{
+                    "title":"Hibernate",
+                    "optional":"true"
+                },{
+                    "title":"Heroku",
+                    "optional":"true"
+                },{
+                    "title":"MySQL",
+                    "optional":"false"
+                },{
+                    "title":"Auth0",
+                    "optional":"true"
+                }],
+                "links":[{
+                    "title":"link",
+                    "url":"https://storification-5a9f7.web.app/home"
+                },{
+                    "title":"Github",
+                    "url":"https://github.com/mehLabs/Storification"
+                }]
+            }]
+        }
+    },
+    "navbar":{
+        "home":"Inicio",
+        "about":"Acerca de mí",
+        "skills":"Habilidades",
+        "education":"Educación",
+        "experience":"Experiencia Laboral",
+        "projects":"Proyectos",
+        "timeline":"Línea de tiempo"
+    },
+    "welcome":{
+        "title":"¡Hola, sea bienvenido/a!",
+        "content":[{
+            "p":"Usted está viendo el portafolio de Hugo Iturrieta. A continuación podrá ver sus habilidades, estudios, proyectos, etc."
+        },{
+            "p":"Si tiene alguna pregunta, él con gusto le responderá."
+        }],
+        "link":{
+            "mailto":"mailto:hugoiturrietadeveloper@gmail.com",
+            "mail":"hugoiturrietadeveloper@gmail.com"
+        },
+        "button":"Gracias, seguir viendo."
+    },
+    "loginbtn":{
+        "login":"Iniciar Sesión",
+        "logout":"Cerrar Sesión"
+    },
+    "footer":"Creado con ❤ por Hugo Iturrieta."
+}

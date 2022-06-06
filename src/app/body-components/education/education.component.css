@@ -1,6 +1,9 @@
 .container{
     padding: 1rem;
 }
+.container h2{
+    text-align: center;
+}
 
 .optional{
     display: none !important;

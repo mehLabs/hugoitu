@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/body-services/data.service';
 
 @Component({
   selector: 'app-welcome',
@@ -6,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-  constructor() { }
+  data:any;
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
+    this.dataService.dlPortfolioText().subscribe(data => {
+      this.data = data.welcome
+    })
+    
+  }
+
+  showModal(){
     document.getElementById("openModalButton")?.click();
   }
 

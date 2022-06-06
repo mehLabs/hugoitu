@@ -5,43 +5,31 @@
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
               </svg>
         </button>
-        <div
-            class="languages-icons d-flex">
-
-            <button class="btn">
-                <img src="https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/spanish-language.png?alt=media">
-            </button>
-
-            <button class="btn"
-            mat-raised-button
-            matTooltip="Coming soon"
-            aria-label="Coming soon">
-                <img src="https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/english-language.png?alt=media">
-            </button>
-        </div>
+        <app-lang></app-lang>
+        <app-login-btn></app-login-btn>
         <!-- TODO <button class="login-btn btn btn-primary">Login</button> -->
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="nav navbar-nav nav-tabs">
               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#home">Inicio</a>
+                  <a class="nav-link" aria-current="page" href="#home" >{{data.home}}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#about">Acerca de mí</a>
+                  <a class="nav-link" href="#about">{{data.about}}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#skills">Habilidades</a>
+                  <a class="nav-link" href="#skills" href="#skills">{{data.skills}}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#education">Educación</a>
+                  <a class="nav-link" href="#education">{{data.education}}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#experience">Experiencia laboral</a>
+                  <a class="nav-link" href="#experience">{{data.experience}}</a>
               </li>
               <li id="timeline-link" class="nav-item">
-                  <a  class="nav-link" href="#timeline">Línea de tiempo de mi vida</a>
+                  <a  class="nav-link" href="#timeline">{{data.timeline}}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#projects">Proyectos</a>
+                  <a class="nav-link" href="#projects">{{data.projects}}</a>
               </li>
           </ul>
       </div>

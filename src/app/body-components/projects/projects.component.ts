@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/body-services/data.service';
 
 @Component({
   selector: 'app-projects',
@@ -8,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
   detailed:boolean = false;
   opcionales:any;
+  data:any = "";
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
-    this.opcionales = document.querySelectorAll(".optional");
+    this.dataService.dlPortfolioText().subscribe(data => {
+      this.data = data.projects;
+      setTimeout(() => {
+        this.opcionales = document.querySelectorAll(".optional");
+      }, 10);
+    })
   }
 
   detallado(){

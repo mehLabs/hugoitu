@@ -1,0 +1,39 @@
+.main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 30rem;
+    height: 30rem;
+}
+.d-flex{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.header i{
+    font-size: 2rem;
+}
+.body{
+    width: 66%;
+}
+.btn{
+    margin: 1rem 0;
+    width: 100%;
+}
+
+
+.nothing{
+    background-color: white !important;
+    color:white !important;
+}

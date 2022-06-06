@@ -5,12 +5,24 @@ body{
     overflow-x: hidden;
 }
 
+section{
+    scroll-margin-top: 3rem;
+}
+
 :root{
-    --main-bg-color: rgb(204, 213, 243);
+    --main-bg-color: rgb(255, 255, 255);
     --main-blue-color: rgb(118, 146, 235);
+    --main-dark-color: rgb(37, 34, 34);
     --main-blue-shadow: rgba(82, 101, 163, 0.507);
+    --highlight-color: rgb(255, 255, 255);
+    --highlight-border: rgb(255, 255, 255);
+    --bs-body-font-family: Helvetica;
+    --test-color: rgb(112, 112, 112);
 }
 
 .btn-primary{
     background-color: var(--main-blue-color)
+}
+.card{
+    box-shadow: 5px 5px 1rem grey;
 }

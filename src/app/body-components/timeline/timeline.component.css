@@ -5,26 +5,19 @@
     background: rgba(114, 124, 245, 0.09);
     margin: 0 auto;
     letter-spacing: 0.2px;
-    position: relative;
     line-height: 1.4em;
     font-size: 1.03em;
     padding: 1rem;
     list-style: none;
-    text-align: left;
-    max-width: 40%;
 }
 
 .card-header{
     display: none;
 }
 
-.accordion{
-    overflow: hidden;
-}
 
 #accordionTimeline.accordion{
-    margin: 5rem 0;
-    margin-bottom: 0;
+    margin: 5rem 0 0;
 }
 
 .optional{
@@ -58,41 +51,29 @@
     border-bottom: 1px dashed #e8ebf1;
     padding-bottom: 25px;
     margin-bottom: 25px;
-    position: relative;
 }
 
-@media (max-width: 767px) {
-    .timeline .event {
-        padding-top: 30px;
-    }
-}
-
-.timeline .event:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-}
-
-.timeline .event:before,
-.timeline .event:after {
-    position: absolute;
-    display: block;
+aside div.accordion-item{
+    background-color: transparent;
 }
 
 .timeline .event:before {
     content: attr(data-date);
     text-align: left;
-    transform: translateY(-2rem);
+    position: relative;
+    display: block;
+    transform: translateY(-1rem);
     font-weight: 100;
     font-size: 0.9em;
     min-width: 120px;
 }
 
 
-.timeline .event:after {
+li h3::before{
     -webkit-box-shadow: 0 0 0 3px #727cf5;
     box-shadow: 0 0 0 3px #727cf5;
-    left: -55.8px;
+    margin-right: 9px;
+    left: 9px;
     background: #fff;
     border-radius: 50%;
     height: 9px;
@@ -112,51 +93,34 @@
     border-right: 3px solid #727cf5;
 }
 
-.rtl .timeline .event::before {
-    left: 0;
-    right: -170px;
-    transform: translateY(-1.5rem);
-}
-
-.rtl .timeline .event::after {
-    left: 0;
-    right: -55.8px;
-}
 
 @media (min-width: 992px){
+    #collapseTimeline{
+        box-shadow: 0 4px 5px black;
+    }
     .aside{
         position: fixed;
         right: 0;
         top: -20px;
         width: 35vw;
-        min-height: 40vh;
-        transition: 1.5s;
-        background-color: transparent;
-        border-width: 0;
     }
     .accordion-item{
         border-width: 0;
     }
-
     .card-header{
         display: block;
         text-align: center;
         background-color: white;
     }
-
-
-    aside div.accordion-item{
-        background-color: transparent;
-    }
     #collapseTimeline{
-        transition: 1.5s;
+        transition: .5s;
         background-color: white;
         height: 100vh;
         overflow-y: scroll;
         overflow-x: hidden;
     }
     #collapseTimeline.collapsed{
-        transition: 1.5s;
+        transition: .5s;
         transform: translateX(34vw);
     }
 
@@ -185,7 +149,7 @@
         display: block;
     }
     .toggle{
-        transition: 1.5s;
+        transition: all .5s, border-left 0s, border-right 0s;
         display: flex;
         position: fixed;
         top:50vh;
@@ -196,11 +160,14 @@
         background-color: white;
         border-radius: 50%;
         border-width: 0;
+        border-right: 1px solid black;
         transform: rotate(180deg);
     }
     .toggle.left{
+        border-width: 0;
+        border-left: 1px solid black;
         position: fixed;
-        transition: 1.5s;
+        transition: all .5s, border-left 0s, border-right 0s;
         right: calc(1vw - 1.5rem);
         transform: rotate(0);
     }

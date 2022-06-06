@@ -1,5 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { DataService } from 'src/app/body-services/data.service';
+import { ScrollSpyService } from 'src/app/body-services/scroll-spy.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,45 +12,51 @@ export class SkillsComponent implements OnInit {
   document:any;
   detailed:boolean = false;
   opcionales:any;
-  constructor() { }
+  data:any = '';
+  barras:NodeListOf<Element>;
+
+  constructor(private dataS: DataService, private scroll:ScrollSpyService) {
+    this.barras = document.querySelectorAll('.progress-bar'); }
 
   ngOnInit(): void {
+    this.dataS.dlPortfolioText().subscribe(data => {
+      this.data = data.skills;
+    })
+    this.barras = document.querySelectorAll('.progress-bar');
     this.opcionales = document.querySelectorAll(".optional");
-    var barras = document.querySelectorAll('.progress-bar');
-    var altura = window.innerHeight;
-
-    window.addEventListener('scroll', function (e) {
+    let altura = window.innerHeight;
+    console.log(altura)
+    this.scroll.getPageYOfsset().subscribe ( (y) => {
+      for(let i=0;i<this.barras.length;i++){
       
-
-      for(let i=0;i<barras.length;i++){
-      
-      let distancia = barras[i].getBoundingClientRect().top;
-
-      
-      if (distancia <= altura){
-          barras[i].classList.add('aparece');
-      }else{
-          barras[i].classList.remove('aparece');
+        let barraY:number = this.barras[i].getBoundingClientRect().top;
+        if (barraY - altura < 0){
+            this.barras[i].classList.add('aparece');
+        }else{
+            this.barras[i].classList.remove('aparece');
+        }
       }
-      }
-    });
+    })
+
+
 
     let largoBarra = document.getElementById("bar")?.clientWidth;
       setTimeout( () => {
-        for (let i=0;i<barras.length;i++){
-          let barra = barras[i].clientWidth;
+        for (let i=0;i<this.barras.length;i++){
+          let barra = this.barras[i].clientWidth;
           
           if (largoBarra !== undefined){
             
             if (barra > (largoBarra*0.7)){
               
-              barras[i].classList.add('green');
+              this.barras[i].classList.add('green');
             }
           }
       }
     },1000)
     
   }
+
 
   detallado(){
     this.detailed = !this.detailed;
