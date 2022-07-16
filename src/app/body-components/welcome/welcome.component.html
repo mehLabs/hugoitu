@@ -3,13 +3,13 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="welcomeModalLabel">{{data.title}}</h5>
+        <h5 class="modal-title" id="welcomeModalLabel" *ngIf="data !== null && data !== undefined">{{data.title}}</h5>
         <div class="d-flex lang">
           <app-lang></app-lang>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" *ngIf="data !== undefined">
         
         <p *ngFor="let paragraph of data.content">
           {{paragraph.p}}
@@ -18,7 +18,7 @@
         <a [href]="data.link.mailto">{{data.link.mail}}</a>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">{{data.button}}</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" *ngIf="data !== undefined">{{data.button}}</button>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
-<div class="main">
-    <div class="d-flex container">
+<div class="main" id="navbar">
+    <div class="d-flex container shadow p-3" *ngIf="data !==undefined">
         <div class="header">
-            <a routerLink="/portfolio" class="back-btn">
+            <a (click)="linkTo('/'); dataService.checkPortfolio()" class="back-btn">
                 <i class="bi bi-arrow-left-circle-fill"></i>
             </a>
             <h1>{{data.title}}</h1>
@@ -18,7 +18,7 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">{{data.content.password}}</label>
             </div>
-            <button class="btn btn-primary">{{data.content.login}}</button>
+            <button class="btn btn-primary login-btn">{{data.content.login}}</button>
         </div>
         <div class="nothing">
             <small>_</small>

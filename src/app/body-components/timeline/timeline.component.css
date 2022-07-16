@@ -10,6 +10,11 @@
     padding: 1rem;
     list-style: none;
 }
+#timeline, #collapseTimeline{
+    max-width: 100vw;
+    overflow-x: hidden;
+    left: 0;
+}
 
 .card-header{
     display: none;

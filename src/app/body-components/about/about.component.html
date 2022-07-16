@@ -1,6 +1,6 @@
 <section id="about">
-    <div class="container">
-        <h2>{{data.title}}</h2>
+    <div class="container" *ngIf="data !== undefined && data.content !== undefined">
+        <h1>Hugo Iturrieta</h1>
         <div class="card">
           <div class="card-body">
             <p>

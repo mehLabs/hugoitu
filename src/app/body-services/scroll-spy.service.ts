@@ -6,16 +6,17 @@ import { Observable, Subject } from 'rxjs';
 })
 export class ScrollSpyService implements OnInit{
 
-  private screenWidth:number;
+  private screenWidth:Subject<number> = new Subject<number>();
   private distancia$:Subject<number> = new Subject<number>();
 
   constructor() {
-    this.screenWidth = window.innerWidth;
     window.addEventListener('scroll', () => {
       
       this.distancia$.next(window.scrollY);
-      console.log(window.scrollY);
 
+    })
+    window.addEventListener('resize', () => {
+      this.screenWidth.next(window.innerWidth);
     })
   }
 
@@ -28,6 +29,6 @@ export class ScrollSpyService implements OnInit{
   }
 
   getScreenWidth(){
-    return this.screenWidth;
+    return this.screenWidth.asObservable();
   }
 }

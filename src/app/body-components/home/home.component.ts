@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DataService } from 'src/app/body-services/data.service';
 import { ScrollSpyService } from 'src/app/body-services/scroll-spy.service';
-import { DarkModeService } from 'src/app/general-services/dark-mode.service';
 
 @Component({
   selector: 'app-home',
@@ -10,16 +9,14 @@ import { DarkModeService } from 'src/app/general-services/dark-mode.service';
 })
 export class HomeComponent implements OnInit {
   @Output() detallado = new EventEmitter;
+  
   animatingB = true;
-  checked = false;
   data:any = '';
   spanish:boolean = true;
   screenWidth:number = 0;
   
   constructor(
-    private dataPortfolio:DataService,
-    private darkMode:DarkModeService,
-    private scroll:ScrollSpyService
+    private dataPortfolio:DataService
     ) { 
   }
 
@@ -35,35 +32,9 @@ export class HomeComponent implements OnInit {
     },5000) 
       
 
-    var button = document.querySelector('#resumeButton');
-    var buttonHeight = 0;
-    if (button?.clientHeight !== undefined){
-      buttonHeight = button?.clientHeight;
-    }
-    var altura = window.innerHeight;
     
-
-    this.screenWidth = this.scroll.getScreenWidth();
-    this.scroll.getPageYOfsset().subscribe( (y) => {
-      if (this.screenWidth < 992){        
-        if (y >= altura - (buttonHeight*2)){
-            button?.classList.add('fixed');
-        }else{
-            button?.classList.remove('fixed');
-        }
-      }else{
-        if (y >= altura - (buttonHeight*3)){
-          button?.classList.add('fixed');
-        }else{
-            button?.classList.remove('fixed');
-        }
-      }
-    })
   }
 
-  setDarkMode(){
-    this.darkMode.setDarkMode();
-  }
 
 
   animating(){
@@ -75,14 +46,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  check(){
-    this.checked = !this.checked;
-    if (this.checked){
+  check(resumir:boolean){
+    if (resumir){
       this.detallado.emit("true");
-      console.log("Checkeado!");
     }else{
       this.detallado.emit("false");
-      console.log("Not checked");
     }
   }
 

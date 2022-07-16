@@ -1,12 +1,16 @@
-<div class="container">
-    <div id="title" class="title" (click)="setDarkMode()">
-        <h1>{{data.name}}</h1>
+<img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/ai-bg.webp?alt=media" alt="artificial intelligente background">
+<div class="home row">
+    <div class="profile col-4">
+        <div class="profile-frame">
+            <img class="profile-pic" src="https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/profile_picture.webp?alt=media">
+        </div>
+        <div class="profile-info">
+            <h2>Full-Stack Developer Jr.</h2>
+        </div>
     </div>
-    <div id="resumeButton" class="btn-long-short" [ngClass]="spanish ? 'spanish' : 'english' ">
-        <label class="switch">
-            <input placeholder="Activar modo resumido" (click)="check()" type="checkbox">
-            <span class="slider round"></span>
-            <span class="underline"></span>
-        </label>
+
+    <div class="col-7">
+
+        <app-about class="mt-4"></app-about>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <section id="education">
-    <div class="container">
+    <div class="container" *ngIf="data !== undefined && data.content !== undefined">
         <h2>{{data.title}}</h2>
         <div class="card mb-3" *ngFor="let card of data.content.cards" [id]="card.id" [ngClass]="{optional: card.optional === 'true'}">
             <div class="card-header">

@@ -1,0 +1,19 @@
+
+<button title="config" class="btn btn-primary border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#settings-list" aria-expanded="false" aria-controls="collapseWidthExample">
+    <i class="bi bi-gear-fill"></i>
+</button>
+<div class="collapse position-fixed" id="settings-list">
+    <div class="row p-4 mt-2 bg-blanco shadow rounded-bottom rounded-end d-flex flex-wrap">
+        <div class="col-12 d-flex justify-content-between py-2">
+            <span class="global-color">Idioma</span> <app-lang class="my-auto"></app-lang>
+        </div>
+        <hr>
+        <div class="col-12 d-flex justify-content-between py-2">
+            <span class="global-color">Modo nocturno</span> <app-dark-mode-btn class="my-auto"></app-dark-mode-btn>
+        </div>
+        <hr>
+        <div class="col-12 d-flex justify-content-between py-2">
+            <span class="global-color">Resumir contenido</span> <app-resume-button class="my-auto" [spanish]="lang" (resumir)="check($event)"></app-resume-button>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 <section id="experience">
-    <div class="container hide" id="camillero">
+  <div class="container" *ngIf="data !== undefined">
+    <div class="hide" id="camillero" *ngIf="data.content !== undefined">
         <h2>{{data.title}}</h2>
         <div class="card" *ngFor="let card of data.content.cards">
             <div class="card-header">
@@ -16,9 +17,12 @@
             </div>
         </div>
     </div>
-    <div id="optional" class="optional">
-      <h2> {{data.content.optional.title}} </h2>
-      <p>{{data.content.optional.content}}
-      </p>
+    <div id="optional" class="optional card mb-3">
+      <div class="card-body" *ngIf="data.content !== undefined">
+        <h2> {{data.content.optional.title}} </h2>
+        <p>{{data.content.optional.content}}
+        </p>
+      </div>
     </div>
+  </div>
 </section>

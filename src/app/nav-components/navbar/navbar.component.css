@@ -1,6 +1,11 @@
 nav{
     display: flex;
     justify-content: center;
+    position: fixed;
+    z-index: 999;
+}
+svg{
+    fill: var(--font-color);
 }
 nav .nav-tabs{
     background-color: var(--main-blue-color);
@@ -44,7 +49,6 @@ nav .navbar-nav{
     color:rgb(189, 181, 34);
 }
 
-
 .navbar-toggler-icon{
     color:black;
 }
@@ -52,7 +56,25 @@ nav .navbar-nav{
     background-color: white;
 }
 
+.botones-izq{
+    width: 100px;
+}
+.botones-der{
+    display: flex;
+}
+
+.space{
+    height: 50px;
+}
+.navbar-brand img{
+    max-height: 30px;
+}
+.navbar-brand img.invert{
+    filter: invert(100%);
+}
+
 @media (min-width: 992px){
+    
     .nav-item a{
         width: 90px;
     }
@@ -62,10 +84,6 @@ nav .navbar-nav{
     }
     .navbar{
         padding-top: 0;
-    }
-    .navbar-nav{
-        width:95vw;
-        box-shadow: 0 0 5px 0px var(--main-blue-shadow);
     }
     .nav-tabs{
         border: none;

@@ -1,6 +1,11 @@
-<button (click)="auth.loginWithRedirect()">Log in</button>
+<div class="d-flex">
+
+    <a routerLink="/login" class="btn btn-primary rounded d-flex border-0"><i class="bi bi-person"></i></a>
+</div>
 
 <!-- TODO: USE MY OWN AUTH INSTEAD OF AUTH0
+<button (click)="auth.loginWithRedirect()">Login</button>
+
     <div class="btn btn-success" *ngIf="auth.isLoggedIn(); else loggedOut">
         {{data.logout}}
     </div>

@@ -1,50 +1,14 @@
-.container{
-    position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    height: 3rem;
-    z-index: 101;
-}
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    background-color: white;
-    width: 100vw;
-}
+
 i{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 a{
     text-decoration: none;
-    color: var(--main-blue-color)
+    color: var(--main-white-rgb)
 }
-
-@media (min-width: 992px) {
-    div.container{
-        position:fixed;
-        top: 5px;
-        right: 1rem;
-        background-color: transparent;
-        width: 15rem;
-    }
-    a{
-        color: white;
-    }
-    ul{
-        justify-content: center;
-        gap:1rem;
-        width: auto;
-        background-color: transparent;
-    }
-
+.btn{
+    border: 0;
 }
-
-@media (min-width:1150px){
-    ul{
-        justify-content: space-around;
-    }
+.border-end-1{
+    border-right: 1px solid var(--main-white-rgb);
 }

@@ -27,10 +27,14 @@
 .body{
     width: 66%;
 }
-.btn{
+.login-btn{
     margin: 1rem 0;
     width: 100%;
 }
+.back-btn{
+    cursor: pointer;
+}
+
 
 
 .nothing{

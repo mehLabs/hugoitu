@@ -20,10 +20,10 @@ export class DataService implements OnInit{
     
     console.log(document.cookie);
     let localLang = this.cookies.checkCookie("lang",this.defaultLang);
+    this.lang = localLang;
 
     this.dlData(localLang).subscribe( data => {
       this.data$.next(data);
-      this.data$.unsubscribe();
     });
   }
 
@@ -38,6 +38,15 @@ export class DataService implements OnInit{
   dlPortfolioText():Observable<any>{
     return this.data$.asObservable();
   }
+
+  checkPortfolio(){
+    this.dlData(this.lang).subscribe( data => {
+      console.log(data);
+      this.data$.next(data);
+    });
+  }
+
+
   dlLoginText():Observable<any>{
     if (this.lang === "spanish"){
       return this.http.get('/assets/login-es.json');

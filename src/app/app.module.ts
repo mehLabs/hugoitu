@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTooltipModule } from '@angular/material/tooltip'
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './body-components/about/about.component';
@@ -28,6 +25,10 @@ import { LoginBtnComponent } from './body-components/login-btn/login-btn.compone
 
 import { AuthModule } from '@auth0/auth0-angular';
 import { RouterModule, Routes} from '@angular/router';
+import { ResumeButtonComponent } from './body-components/home/resume-button/resume-button.component';
+import { DarkModeBtnComponent } from './body-components/dark-mode-btn/dark-mode-btn.component';
+import { SettingsComponent } from './general-components/settings/settings.component';
+import { RightSideBtnsComponent } from './nav-components/right-side-btns/right-side-btns.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +50,15 @@ import { RouterModule, Routes} from '@angular/router';
     PortfolioComponent,
     LoginComponent,
     Page404Component,
-    LoginBtnComponent
+    LoginBtnComponent,
+    ResumeButtonComponent,
+    DarkModeBtnComponent,
+    SettingsComponent,
+    RightSideBtnsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTooltipModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     // Import the module into the application, with configuration
     AuthModule.forRoot({

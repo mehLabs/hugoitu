@@ -1,6 +1,5 @@
 <footer>
-    <app-social-media></app-social-media>
-    <div class="credits">
+    <div class="credits" *ngIf="data !== undefined">
         <small>{{data.footer}} V2.0</small>
     </div>
 </footer>

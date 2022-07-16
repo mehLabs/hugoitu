@@ -19,4 +19,9 @@ export class AboutComponent implements OnInit {
     })
   }
 
+  detallado(){
+    let about = document.getElementById("accordionAbout");
+      about?.classList.toggle("show");
+  }
+
 }

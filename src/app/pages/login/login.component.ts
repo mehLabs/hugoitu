@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { DataService } from 'src/app/body-services/data.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DataService } from 'src/app/body-services/data.service';
 })
 export class LoginComponent implements OnInit {
   data:any;
-  constructor(private dataService:DataService) { }
+  constructor(public dataService:DataService, private router:Router) { }
 
   ngOnInit(): void {
     this.dataService.dlLoginText().subscribe(data => {
@@ -16,4 +17,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  linkTo(link:string,...callbacks:Function[]){
+    this.router.navigate([link]);
+    callbacks.forEach((callback) => callback());
+  }
 }

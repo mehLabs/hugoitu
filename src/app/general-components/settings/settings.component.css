@@ -1,0 +1,13 @@
+.bg-celeste{
+    background-color: var(--main-blue-color);
+}
+.global-color{
+    color:var(--font-color)
+}
+#settings-list{
+    max-width: 550px;
+    right: 0;
+}
+.bi-gear-fill{
+    font-size: 1.5rem;
+}

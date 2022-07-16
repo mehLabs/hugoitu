@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { AboutComponent } from 'src/app/body-components/about/about.component';
 import { EducationComponent } from 'src/app/body-components/education/education.component';
 import { ExperienceComponent } from 'src/app/body-components/experience/experience.component';
 import { HomeComponent } from 'src/app/body-components/home/home.component';
@@ -17,6 +18,7 @@ export class PortfolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   
@@ -30,6 +32,7 @@ export class PortfolioComponent implements OnInit {
   @ViewChild(ProjectsComponent) projects:any;
   @ViewChild(TimelineComponent) timeline:any;
   @ViewChild(WelcomeComponent) welcome:any;
+  @ViewChild(AboutComponent) about:any;
 
   expand($event:any){
     
@@ -44,14 +47,20 @@ export class PortfolioComponent implements OnInit {
   }
 
   showModal(){
-    this.welcome.showModal();
-    this.home.setLang();
+    if (this.welcome !== undefined){
+      this.welcome.showModal();
+      this.home.setLang();
+    }else{
+      setTimeout(() => {
+        this.welcome.showModal();
+        this.home.setLang();
+      }, 100);
+    }
   }
 
   detailed(isTrue:any){
-    let about = document.getElementById("accordionAbout");
     if (isTrue===("true")){
-      about?.classList.add("show");
+      this.about.detallado();
       this.skills.detallado();
       this.education.detallado();
       this.experience.detallado();
@@ -59,7 +68,7 @@ export class PortfolioComponent implements OnInit {
       this.timeline.detallado();
 
     }else{
-      about?.classList.remove("show");
+      this.about.detallado();
       this.detallado = false;
       this.skills.detallado();
       this.education.detallado();
