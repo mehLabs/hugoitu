@@ -12,13 +12,14 @@ import { EditService } from '../portfolio-services/edit.service';
 export class DataService implements OnInit{
   spanish:boolean = true;
   loaded:boolean = false;
+  loading:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   lang:any;
   defaultLang="spanish";
   jwt:Object|undefined;
   modified:boolean = false;
   saved: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  portfolio$:BehaviorSubject<any> = new BehaviorSubject<any>("null");
+  portfolio$:BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   originalPortfolio:any;
 
@@ -131,8 +132,13 @@ export class DataService implements OnInit{
       
   }
 
+  getLoading(){
+    return this.loading.asObservable();
+  }
+
   saveAll(){
     this.jwt = this.login.getJTW();
+    this.loading.next(true);
 
     const header = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -146,6 +152,7 @@ export class DataService implements OnInit{
       this.modified = false;
       this.editService.toggleEdit();
       this.originalPortfolio = structuredClone(this.savedData);
+      this.loading.next(false);
 
     });
   }

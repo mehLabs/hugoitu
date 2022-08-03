@@ -1,6 +1,6 @@
 
 
-  <app-loading-spinner (pageLoaded)="showModal()"></app-loading-spinner>
+  <app-loading-spinner *ngIf="!loaded"></app-loading-spinner>
   <app-welcome></app-welcome>
   <div class="scrollspy expand" id="home">
 
@@ -17,5 +17,5 @@
     <app-footer></app-footer>
     <app-scroll-top-btn></app-scroll-top-btn>
     <app-toaster></app-toaster>
-    <app-loading-spinner></app-loading-spinner>
+    <app-uploading-spinner [uploading]="uploading"></app-uploading-spinner>
   </div>

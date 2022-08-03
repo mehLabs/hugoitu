@@ -1,0 +1,14 @@
+.text-info{
+    font-size: 5rem;
+}
+.pantalla{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+
+}
+.z-index{
+    
+    z-index: 1000;
+}

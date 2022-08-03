@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/body-services/data.service';
 
 @Component({
   selector: 'app-loading-spinner',

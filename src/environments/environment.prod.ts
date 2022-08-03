@@ -13,7 +13,6 @@ export const environment = {
   production: true,
 
   dev: {
-    serverUrl:"http://localhost:7000", //serverUrl:"https://hugoitu.herokuapp.com",
-    localUrl:"http://localhost:7000"
+    serverUrl:"https://hugoitu.herokuapp.com", //serverUrl:"https://hugoitu.herokuapp.com",
   }
-};
+}

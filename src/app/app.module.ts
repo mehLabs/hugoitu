@@ -53,6 +53,7 @@ import { ToasterComponent } from './body-components/toaster/toaster.component';
 import { EducationCardComponent } from './body-components/education/education-card/education-card.component';
 import { ExperienceCardComponent } from './body-components/experience/experience-card/experience-card.component';
 import { ProjectsCardComponent } from './body-components/projects/projects-card/projects-card.component';
+import { UploadingSpinnerComponent } from './body-components/uploading-spinner/uploading-spinner.component';
 
 
 @NgModule({
@@ -97,6 +98,7 @@ import { ProjectsCardComponent } from './body-components/projects/projects-card/
     EducationCardComponent,
     ExperienceCardComponent,
     ProjectsCardComponent,
+    UploadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "target": "hugo-portfolio",
       "public": "dist/hugo-portfolio",
       "ignore": [
         "firebase.json",

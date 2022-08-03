@@ -6,6 +6,7 @@ import { ProjectsComponent } from 'src/app/body-components/projects/projects.com
 import { SkillsComponent } from 'src/app/body-components/skills/skills.component';
 import { TimelineComponent } from 'src/app/body-components/timeline/timeline.component';
 import { WelcomeComponent } from 'src/app/body-components/welcome/welcome.component';
+import { DataService } from 'src/app/body-services/data.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -13,10 +14,21 @@ import { WelcomeComponent } from 'src/app/body-components/welcome/welcome.compon
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  loaded:boolean = false;
+  uploading:boolean = false;
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getLoading().subscribe((isLoading:boolean) => {
+      this.uploading = isLoading;
+    })
+
+    this.dataService.dlPortfolio().subscribe( (data) =>{
+      if (data !== null){
+        this.loaded = true;
+      }
+    })
     
   }
 
@@ -75,6 +87,7 @@ export class PortfolioComponent implements OnInit {
       this.timeline.detallado();
     }
   }
+
 
  
   
