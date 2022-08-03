@@ -1,0 +1,8 @@
+<button 
+    type="button" 
+    title="Editar perfil" 
+    class="btn btn-primary rounded d-flex border-0"
+    (click)="toggleEditMode()"
+> 
+    <i class="bi bi-pencil-square" [ngClass]="{'bi-pencil-square': !editing, 'bi-x-lg': editing}"></i> 
+</button>

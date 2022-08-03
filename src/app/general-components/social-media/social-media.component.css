@@ -4,11 +4,19 @@ i{
 }
 a{
     text-decoration: none;
-    color: var(--main-white-rgb)
 }
 .btn{
     border: 0;
 }
 .border-end-1{
-    border-right: 1px solid var(--main-white-rgb);
+    padding-right: 0.75rem;
+    border-right: 1px solid var(--font-color);
+}
+
+@media (min-width:992px) and (max-width:1025px) {
+    .btn{
+        padding-left: 0.4rem;
+        padding-right:0.4rem;
+    }
+    
 }

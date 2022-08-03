@@ -1,7 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { DataService } from 'src/app/body-services/data.service';
 import { ScrollSpyService } from 'src/app/body-services/scroll-spy.service';
+import { EditService } from 'src/app/portfolio-services/edit.service';
 
 @Component({
   selector: 'app-skills',
@@ -14,18 +14,58 @@ export class SkillsComponent implements OnInit {
   opcionales:any;
   data:any = '';
   barras:NodeListOf<Element>;
+  portfolio:any[] = [];
 
-  constructor(private dataS: DataService, private scroll:ScrollSpyService) {
+
+  adding:boolean=false;
+
+  
+  // editing copy&pastle
+  editMode:boolean = false;
+  editing:boolean = false;
+  editElement(isEditing:boolean){ //Inicia el proceso de editar un componente
+    if (!isEditing){
+      this.categorias = this.agrupar(this.portfolio);
+    }
+  }
+  //
+
+  categorias:any;
+
+  Object = Object;
+
+  constructor(
+    private dataS: DataService, 
+    private scroll:ScrollSpyService,
+    private editService:EditService
+    ) {
     this.barras = document.querySelectorAll('.progress-bar'); }
 
   ngOnInit(): void {
+    this.editService.getEditMode().subscribe( (isEditMode) => {
+      this.editMode = isEditMode
+    })
+
     this.dataS.dlPortfolioText().subscribe(data => {
       this.data = data.skills;
     })
+    this.dataS.dlPortfolio().subscribe(data => {
+      this.portfolio = data.tecnologias;
+      
+      this.categorias = this.agrupar(this.portfolio)
+      console.log(this.categorias);
+
+
+      
+    })
+
+    
+    
+
+
     this.barras = document.querySelectorAll('.progress-bar');
     this.opcionales = document.querySelectorAll(".optional");
     let altura = window.innerHeight;
-    console.log(altura)
     this.scroll.getPageYOfsset().subscribe ( (y) => {
       for(let i=0;i<this.barras.length;i++){
       
@@ -57,6 +97,28 @@ export class SkillsComponent implements OnInit {
     
   }
 
+  addEvent($event:boolean){
+    this.adding = $event;
+    console.log($event);
+  }
+
+  agrupar(original:any[]){
+    if (original !== undefined && original !== null){
+      let agrupado;
+      agrupado = original.reduce((grupo,tecnologia) => {
+        //No es muy escalable pero lo necesito para editar elementos en este componente
+        tecnologia.edit = false;
+        //
+        const {categoria} = tecnologia;
+        grupo[categoria] = grupo[categoria] ?? [];
+        grupo[categoria].push(tecnologia);
+        return grupo;
+      }, {});
+      return agrupado;
+    }
+    return null;
+  }
+
 
   detallado(){
     this.detailed = !this.detailed;
@@ -70,6 +132,21 @@ export class SkillsComponent implements OnInit {
         element.classList.add("optional")
       }
     }
+  }
+
+  newSkill(skill:any){
+
+    this.adding = false;
+    console.log(skill);
+    this.portfolio.push(skill);
+    this.categorias = this.agrupar(this.portfolio);
+    this.dataS.update(this.portfolio,"tecnologias")
+
+  }
+
+  deleteSkill(skill:any){
+    this.portfolio = this.portfolio.filter( (oSkill) => oSkill != skill);
+    this.categorias = this.agrupar(this.portfolio);
   }
 }
 

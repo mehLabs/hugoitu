@@ -1,0 +1,9 @@
+<div class="d-flex h-100 p-2" *ngIf="editMode">
+    <button type="button" 
+    aria-label="Editar esta sección" 
+    class="btn btn-primary rounded-circle"
+    (click)="edit()"
+    >
+        <i class="bi bi-pencil-square" [ngClass]="{'bi-pencil-square':!isEditing, 'bi-check-lg':isEditing}"></i>
+    </button>
+</div>

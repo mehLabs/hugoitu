@@ -10,15 +10,27 @@
             </div>
         </div>
         <div class="body">
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="asdasd@example.com">
-                <label for="floatingInput">{{data.content.email}}</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">{{data.content.password}}</label>
-            </div>
-            <button class="btn btn-primary login-btn">{{data.content.login}}</button>
+            <form (ngSubmit)="login()">
+                <div class="form-floating mb-3">
+                    <input type="email" autocomplete="username" class="form-control" id="floatingInput" placeholder="asdasd@example.com" [formControl]="username">
+                    <label for="floatingInput">{{data.content.email}}</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" autocomplete="current-password" class="form-control" id="floatingPassword" placeholder="Password" [formControl]="password">
+                    <label for="floatingPassword">{{data.content.password}}</label>
+                </div>
+                <p class="text-danger" *ngIf="wrong">
+                    Usuario o contraseña erróneas. Inténtelo de nuevo.
+                </p>
+                <button type="submit" class="btn btn-primary login-btn">
+                    {{data.content.login}} 
+                    <div class="spinner-border spinner-border-sm" role="status" *ngIf="loading">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </button>
+                
+                <button (click)="test()" type="button" class="btn btn-primary login-btn">Test Server</button>
+            </form>
         </div>
         <div class="nothing">
             <small>_</small>

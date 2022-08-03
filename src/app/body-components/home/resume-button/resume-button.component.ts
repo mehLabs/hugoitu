@@ -9,7 +9,7 @@ import { ScrollSpyService } from 'src/app/body-services/scroll-spy.service';
 export class ResumeButtonComponent implements OnInit {
 
   @Input() spanish:any;
-  @Output() resumir: EventEmitter<boolean> = new EventEmitter();
+  @Output() detallado: EventEmitter<boolean> = new EventEmitter<boolean>();
   
   checked = false;
   screenWidth:number = 0;
@@ -22,10 +22,10 @@ export class ResumeButtonComponent implements OnInit {
   check(){
     this.checked = !this.checked;
     if (this.checked){
-      this.resumir.emit(true);
+      this.detallado.emit(true);
       console.log("Checkeado!");
     }else{
-      this.resumir.emit(false);
+      this.detallado.emit(false);
       console.log("Not checked");
     }
   }

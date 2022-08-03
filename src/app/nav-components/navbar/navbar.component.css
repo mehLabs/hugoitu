@@ -63,9 +63,13 @@ nav .navbar-nav{
     display: flex;
 }
 
-.space{
-    height: 50px;
+.flex-grow{
+    flex-grow: 1;
 }
+.space{
+    height: 56px;
+}
+
 .navbar-brand img{
     max-height: 30px;
 }
@@ -100,5 +104,10 @@ nav .navbar-nav{
 @media (min-width:1150px){
     .nav-item a{
         width: auto;
+    }
+}
+@media (max-width:495px){
+    .space{
+        height: 98px;
     }
 }

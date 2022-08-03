@@ -1,0 +1,7 @@
+<div class="name d-flex">
+    <h1 class="text-mc" *ngIf="!editing">
+        <span>{{data.name}}</span>
+    </h1>
+    <input aria-label="Título del portfolio" *ngIf="editing" [(ngModel)]="data.name">
+    <app-edit-section-btn (editing)="editElement($event)" ></app-edit-section-btn>
+</div>

@@ -1,0 +1,10 @@
+<button 
+    type="button" 
+    aria-label="añadir contenido" 
+    class="btn btn-primary w-100" 
+    (click)="emitAdd()"
+    *ngIf="editMode">
+        <span *ngIf="!add">{{texto}}</span>
+        <span *ngIf="add">Cancelar</span>
+        
+</button>

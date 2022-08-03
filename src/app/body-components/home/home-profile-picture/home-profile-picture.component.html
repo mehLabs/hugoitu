@@ -1,0 +1,11 @@
+<div class="profile-frame d-flex" *ngIf="data !== undefined">
+    <img  alt="Hugo Iturrieta" [ngClass]="{'img-filter': editMode === true}" class="profile-pic" [src]="sanitize(data.img_perfil)">
+    <div class="btn-container position-fixed d-flex justify-content-center align-items-center" *ngIf="editMode">
+        <label for="fileInput_profile">
+            <div class="btn btn-primary rounded-circle">
+              <i class="bi bi-pencil-square"></i>
+            </div>
+          </label>
+          <input accept="image/png, image/gif, image/jpeg" (change)="inputImage($event)" class="no-display" aria-label="_" type="file" id="fileInput_profile" name="filedata"/>
+    </div>
+</div>

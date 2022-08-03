@@ -1,0 +1,24 @@
+<div class="card w-100 p-4 my-2">
+        <div class="form-floating my-1">
+            <input id="projectTitulo" class="form-control" [(ngModel)]="project.title" placeholder="Añadir un título">
+            <label for="projectTitulo">Título</label>
+        </div>
+    
+        <div class="my-1">
+            <label for="formFile" class="form-label">Ingresa una imagen para tu proyecto</label>
+            <input (change)="inputImage($event)" class="form-control" type="file" id="formFile">
+        </div>
+    
+        <div class="my-1 form-floating">
+            <input [(ngModel)]="project.enlace" id="proyectoUrl" class="form-control" placeholder="Añade un enlace">
+            <label for="proyectoUrl">Enlace</label>
+        </div>
+    
+        <div class="my-1 form-floating">
+            <input [(ngModel)]="project.description" id="proyectoDescripcion" class="form-control" placeholder="Añade una descripción">
+            <label for="proyectoDescripcion">Descripción</label>
+        </div>
+
+        <button class="btn btn-primary" type="button" (click)="newProyecto()">Listo</button>
+
+</div>

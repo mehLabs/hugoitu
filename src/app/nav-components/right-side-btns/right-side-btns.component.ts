@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
@@ -8,6 +8,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class RightSideBtnsComponent implements OnInit {
   @Output() detallado = new EventEmitter<any>();
+  @Input() ancho:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,5 +21,6 @@ export class RightSideBtnsComponent implements OnInit {
       this.detallado.emit("false");
     }
   }
+
 
 }

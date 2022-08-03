@@ -1,0 +1,12 @@
+.btn{
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+}
+i{
+    line-height: 0;
+}

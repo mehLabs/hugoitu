@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/body-services/data.service';
+import { EditService } from 'src/app/portfolio-services/edit.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,8 +11,11 @@ export class ProjectsComponent implements OnInit {
   detailed:boolean = false;
   opcionales:any;
   data:any = "";
+  proyectos:any[] = [];
+  addMode:boolean = false;
+  editMode:boolean = false;
 
-  constructor(private dataService:DataService) { }
+  constructor(private dataService:DataService, private editService:EditService) { }
 
   ngOnInit(): void {
     this.dataService.dlPortfolioText().subscribe(data => {
@@ -20,6 +24,21 @@ export class ProjectsComponent implements OnInit {
         this.opcionales = document.querySelectorAll(".optional");
       }, 10);
     })
+
+    this.dataService.dlPortfolio().subscribe(data => {
+      if (data.proyectos !== undefined){
+        this.proyectos = data.proyectos.map((element:any) => ({
+          ...element,
+          edit: false
+        }));
+
+      }
+    })
+
+    
+    this.editService.getEditMode().subscribe( (isEditMode) => {
+      this.editMode = isEditMode
+    });
   }
 
   detallado(){
@@ -33,6 +52,20 @@ export class ProjectsComponent implements OnInit {
         element.classList.add("optional");
       }
     }
+  }
+
+  deleteElement(card:any){
+    this.proyectos = this.proyectos.filter( (element:any) => element != card);
+    this.dataService.update(this.proyectos,"proyectos");
+  }
+
+  addProyecto(proyecto:any){
+    this.proyectos.unshift(proyecto);
+    this.dataService.update(this.proyectos,"proyectos");
+  }
+
+  update(){
+    this.dataService.update(this.proyectos,"proyectos");  
   }
 
 }

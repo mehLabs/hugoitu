@@ -1,3 +1,9 @@
 .navbar-toggler{
     padding:0;
 }
+.grupo-start{
+    margin-right: 00.75rem;
+}
+.botones-der{
+    justify-content: flex-end;
+}

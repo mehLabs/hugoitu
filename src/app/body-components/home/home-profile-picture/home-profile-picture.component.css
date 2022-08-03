@@ -1,0 +1,17 @@
+
+.profile-pic{
+    height: 200px;
+    width: auto;
+  }
+  .profile-frame{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--main-blue-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4)!important;
+    overflow: hidden;
+  }
+.btn-container{
+  width: 150px;
+  height: 150px;
+}

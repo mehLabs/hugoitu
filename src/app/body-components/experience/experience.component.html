@@ -1,23 +1,18 @@
 <section id="experience">
   <div class="container" *ngIf="data !== undefined">
-    <div class="hide" id="camillero" *ngIf="data.content !== undefined">
-        <h2>{{data.title}}</h2>
-        <div class="card" *ngFor="let card of data.content.cards">
-            <div class="card-header">
-                {{card.business}}
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">{{card.title}}</h5>
-              <p class="card-text">{{card.begin}} - {{card.end}}</p>
-            </div>
-            <div class="card-body">
-              <p class="card-text" *ngFor="let paragraph of card.content">
-                  {{paragraph.p}}
-              </p>
-            </div>
-        </div>
+    <div id="camillero" class="w-100" *ngIf="portfolio !== undefined">
+        <h2 class="text-center">{{data.title}}</h2>
+
+        <app-add-section-btn class="w-100" [add]="addMode" (click)="addMode = !addMode" [texto]="'Añadir experiencia'"></app-add-section-btn>
+
+        <app-add-experience [addMode]="addMode" (adding)="addEvent($event)" *ngIf="editMode"></app-add-experience>
+
+
+        <app-experience-card *ngFor="let card of portfolio" [card]="card" (deleteEvent)="deleteElement($event)" (updateEvent)="this.update()"></app-experience-card>
+
+
     </div>
-    <div id="optional" class="optional card mb-3">
+    <div id="optional" class="optional card mb-3 hide">
       <div class="card-body" *ngIf="data.content !== undefined">
         <h2> {{data.content.optional.title}} </h2>
         <p>{{data.content.optional.content}}

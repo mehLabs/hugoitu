@@ -1,17 +1,20 @@
 {
+    "lang":"es",
     "page":"portfolio",
     "home":{
-        "name":"Hugo Iturrieta"
+        "name":"Hugo Iturrieta",
+        "title":"Full-Stack Developer Jr."
     },
     "detailed":{
         "detailed":"Detallado",
         "resumed":"Resumido"
     },
     "about":{
+        "name":"Hugo Iturrieta",
         "title":"Acerca de mí",
         "content":{
-            "p1":"¡Hola! Estoy muy agradecido de que hayas visitado mi página web 😀",
-            "p2":"Aquí un desarrollador junior esperando su primera oportunidad laboral para desarrollar sus habilidades al punto de ser capaz de enseñar y dirigir a otros. Persona autónoma, proactiva, autodidacta, con buen manejo de habilidades interpersonales y orientado a objetivos. Compañero de trabajo colaborativo, con mucha experiencia trabajando en equipo y fijando metas y planes.",
+            "p1":"¡Hola! Estoy muy agradecido de que hayas visitado mi página web 😀 \n\n Aquí un desarrollador junior esperando su primera oportunidad laboral para desarrollar sus habilidades al punto de ser capaz de enseñar y dirigir a otros. Persona autónoma, proactiva, autodidacta, con buen manejo de habilidades interpersonales y orientado a objetivos. Compañero de trabajo colaborativo, con mucha experiencia trabajando en equipo y fijando metas y planes.",
+            "p2":"",
             "p3":"¡Me gustaría saber el resto!",
             "p4":"Soy un joven de 24 años (cumplo años el 21 de Abril muy entusiasmado por crecer y aprender. Desde muy chico me interesa la tecnología, solía ser el amigo que traía noticias interesantes, contando sobre algo nuevo que se estaba desarrollando, algo que las noticias no cubrían, como cuando Google empezó a hablar de Google Glass, o cuando salió Oculus Rift, fui el que les explicó qué era la Inteligencia Artificial y les mostró un chatbot que ahora es un clásico (CleverBot). El último año, cuando debimos hacer una presentación de nuestras 'tesinas', un grupo de alumnos tenía dinero y compró un control inalámbrico para pasar las diapositivas. Se me ocurrió usar mi teléfono, investigué algunas apps en inglés y cuando la encontré, la configuré con mi netbook y les ayudé a todos los grupos a tener la app y el programa instalados para poder pasar diapositivas con el teléfono.",
             "p5":"Me encantaría contarles sobre mí en una entrevista, pero si les gustaría saber un poco ahora, me recibí a los 18 años de una escuela técnica como Técnico Químico, luego de lo cual serví 2 años como misionero voluntario.",
@@ -32,6 +35,7 @@
         "title":"Educación",
         "content":{
             "cards":[{
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/inti.png?alt=media",
                 "id":"argprograma",
                 "optional":"false",
                 "school":"Instituto Nacional de Tecnología Industrial (INTI)",
@@ -46,6 +50,7 @@
                 }]
             },
             {
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/logo-uns-horizontal.png?alt=media",
                 "id":"uns",
                 "optional":"false",
                 "school":"Universidad Nacional del Sur",
@@ -57,6 +62,7 @@
                 }]
             },
             {
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/est4.jfif?alt=media",
                 "id":"secundaria",
                 "optional":"true",
                 "school":"Escuela técnica N°4 'Antártida' - Bahía Blanca",
@@ -70,6 +76,8 @@
         "title":"Experiencia laboral",
         "content":{
             "cards":[{
+                "color":"ffffff",
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/hps_logo.jpg?alt=media",
                 "business":"Hospital Privado del Sur (FUMEBA)",
                 "title":"Camillero",
                 "begin":"Abril 2021",
@@ -78,6 +86,8 @@
                     "p":"Trabajé llevando movilizando y transportando pacientes en silla de ruedas y en camilla, trabajando en equipo con enfermeros, camilleros y médicos. El trabajo requiere mucha responsabilidad y esfuerzo físico. Aprendí a trabajar bajo altísima presión."
                 }]
             },{
+                "color":"f4f3c7",
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/tiro-paintball.jfif?alt=media",
                 "business":"Tiro Paintball",
                 "title":"Atención al público",
                 "begin":"Octubre 2020",
@@ -86,6 +96,8 @@
                     "p":"Aprendí rápidamente todo lo relacionado con el paintball, incluso a reparar marcadoras y dar charlas de seguridad a los clientes nuevos antes de cada juego. Dirigía juegos, cargaba marcadoras y anotaba lo que cada persona consumía. Limpiábamos con lavandina y seguíamos el protocolo covid."
                 }]
             },{
+                "color":"ca1f0e",
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/logo-churrosElTopo.png?alt=media",
                 "business":"Churros El Topo, Monte Hermoso",
                 "title":"Cocinero y vendedor",
                 "begin":"Diciembre 2019",
@@ -94,6 +106,8 @@
                     "p":"Nos contrataron por la temporada en la playa. Trabajamos bajo presión en la cocina y trabajamos en equipo para cocinar todas las cosas a tiempo. Vendí en la playa y tuve un excelente manejo del dinero reconocido por la dueña del lugar."
                 }]
             },{
+                "color":"103156",
+                "img":"https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/church_logo.png?alt=media",
                 "business":"La Iglesia de Jesucristo de los Santos de los Últimos Días",
                 "title":"Servicio voluntario (Chiclayo - Perú)",
                 "begin":"Mayo 2017",

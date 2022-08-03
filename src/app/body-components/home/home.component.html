@@ -1,16 +1,29 @@
-<img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/ai-bg.webp?alt=media" alt="artificial intelligente background">
-<div class="home row">
-    <div class="profile col-4">
-        <div class="profile-frame">
-            <img class="profile-pic" src="https://firebasestorage.googleapis.com/v0/b/hugoiturrieta-fffd1.appspot.com/o/profile_picture.webp?alt=media">
-        </div>
-        <div class="profile-info">
-            <h2>Full-Stack Developer Jr.</h2>
-        </div>
+<div class="background d-flex justify-content-center align-items-center" *ngIf="perfil !== undefined">
+    <img class="img-fluid" [ngClass]="{'img-filter': editMode === true}" [src]="perfil.img_background" alt="artificial intelligente background">
+    <div class="btn-container position-absolute d-flex " *ngIf="editMode">
+        <label for="fileInput_background">
+            <div class="btn btn-primary rounded-circle">
+              <i class="bi bi-pencil-square"></i>
+            </div>
+          </label>
+          <input accept="image/png, image/gif, image/jpeg" (change)="inputImage($event)" class="no-display" aria-label="_" type="file" id="fileInput_background" name="filedata"/>
     </div>
+</div>
+<div class="home container">
+    <div class="row">
+        <div class="profile col-4 align-items-center justify-content-start flex-column">
+            <app-home-profile-picture [data]="perfil"></app-home-profile-picture>
+            <div class="profile-info d-flex" *ngIf="perfil">
+                <h2 *ngIf="!editing">{{perfil.ocupacion}}</h2>
+                <textarea cols="10" rows="3" *ngIf="editing" aria-label="Título" [(ngModel)]="perfil.ocupacion"></textarea>
+                <app-edit-section-btn (editing)="editElement($event)"></app-edit-section-btn>
 
-    <div class="col-7">
-
-        <app-about class="mt-4"></app-about>
+            </div>
+        </div>
+    
+        <div class="col-md col-12">
+    
+            <app-about class="mt-4"></app-about>
+        </div>
     </div>
 </div>

@@ -1,0 +1,58 @@
+<div class="my-2 card">
+
+    <div class="row g-0">
+            <div class="col-md-4 col-12 d-flex justify-content-center align-items-center p-4" [style.background-color]="card.color" >
+                <div class="row">
+                    <label for="formFileSm" class="form-label">Imagen</label>
+                    <input (change)="inputImage($event)" class="form-control form-control-sm" id="formFileSm" type="file">
+                </div>
+                <div class="row">
+                    <label for="exampleColorInput" class="form-label">Color</label>
+                    <input type="color" class="form-control form-control-color" [(ngModel)]="card.color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+                </div>
+
+            </div>
+            <div class="col-md-8 col-12 py-4">
+              <div class="card-body">
+                <div class="card-text">
+                  <div class="form-floating my-1">
+                    <input class="form-control" id="educEscuela" [(ngModel)]="card.escuela" aria-label="Editar empresa">
+                    <label for="educEscuela">Escuela</label>
+                  </div>
+                </div>
+
+                <div class="form-floating my-1">
+                  <input id="educTitulo" class="form-control" [(ngModel)]="card.titulo" aria-label="Editar posición">
+                  <label for="educTitulo">Título</label>
+                </div>
+
+                <div class="row my-1">
+                  <div class="col-6 form-floating"> 
+                    <input id="educInicio" class="form-control" [(ngModel)]="card.inicio" aria-label="Editar inicio de la posición">
+                    <label for="educInicio">Inicio</label>
+                  </div>
+                  <div class="col-6 form-floating">
+                    <input id="educFin" class="form-control" [(ngModel)]="card.fin" aria-label="Editar fin de la posición">
+                    <label for="educFin">Fin</label>
+                  </div>
+                </div>
+
+                <div class="row my-1 mx-0">
+                    <select class="form-select" [(ngModel)]="card.opcional" aria-label="Es opcional?">
+                        <option value=1>Opcional</option>
+                        <option value=0>No opcional</option>
+                      </select>
+                </div>
+
+              </div>
+              <div class="card-body">
+                <div class="my-1 d-flex">
+                  <textarea class="w-100" [(ngModel)]="card.descripcion" aria-label="Editar descripción"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" aria-label="Botón de añadir experiencia" (click)="addEducacion()">Listo</button>
+
+          </div>
+</div>

@@ -52,15 +52,16 @@ export class TimelineComponent implements OnInit {
     let toggleIcon = document.getElementById("toggle");
     let timeline = document.getElementById("collapseTimeline");
     let listaFechas = document.getElementById("listaFechas");
+    let aside = document.getElementById("timeline");
 
     if (this.toggleTl){
-      timeline?.classList.add("collapsed");
+      aside?.classList.add("collapsed");
       toggleIcon?.classList.add("left");
       listaFechas?.classList.add("collapsed");
       this.collapseButton.emit("true");
     }
     else{
-      timeline?.classList.remove("collapsed");
+      aside?.classList.remove("collapsed");
       toggleIcon?.classList.remove("left");
       listaFechas?.classList.remove("collapsed");
       this.collapseButton.emit("false");

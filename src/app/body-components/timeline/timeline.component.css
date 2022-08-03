@@ -10,11 +10,6 @@
     padding: 1rem;
     list-style: none;
 }
-#timeline, #collapseTimeline{
-    max-width: 100vw;
-    overflow-x: hidden;
-    left: 0;
-}
 
 .card-header{
     display: none;
@@ -104,10 +99,16 @@ li h3::before{
         box-shadow: 0 4px 5px black;
     }
     .aside{
+        transition: 0.5s;
         position: fixed;
         right: 0;
         top: -20px;
         width: 35vw;
+    }
+    .aside.collapsed{
+        transition: .5s;
+        transform: translateX(34vw);
+        
     }
     .accordion-item{
         border-width: 0;

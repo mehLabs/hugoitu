@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/body-services/data.service';
+import { EditService } from 'src/app/portfolio-services/edit.service';
+import { FirebaseStorageService } from 'src/app/portfolio-services/firebase-storage.service';
 
 @Component({
   selector: 'app-education',
@@ -9,19 +11,34 @@ import { DataService } from 'src/app/body-services/data.service';
 export class EducationComponent implements OnInit {
   detailed:boolean = false;
   opcionales:any;
-  data:any = '';
+  data:any[] = [];
+  editMode:boolean=false;
+  addMode:boolean = false;
 
-  constructor(private dataS: DataService) { }
+  context:any = '';
+
+  
+  
+
+  constructor(
+    private dataS: DataService, 
+    private editService:EditService,
+    ) { }
 
 
   ngOnInit(): void {
-    this.dataS.dlPortfolioText().subscribe(data => {
-      this.data = data.education;
+    this.editService.getEditMode().subscribe(isEditMode => this.editMode = isEditMode);
+
+    this.dataS.dlPortfolioText().subscribe( data => this.context = data.education);
+
+    this.dataS.dlPortfolio().subscribe(data => {
+      this.data = data.educacion;
       setTimeout( () => {
         this.opcionales = document.querySelectorAll(".optional");
 
       },10)
     })
+
 
   }
 
@@ -36,6 +53,25 @@ export class EducationComponent implements OnInit {
         element.classList.add("optional");
       }
     }
+  }
+
+  uploadImg(card:any){
+    let fileUploader = document.getElementById("fileInput"+card.id_educacion);
+    fileUploader?.click;
+  }
+
+  addEvent(educacion:any){
+    this.data.unshift(educacion);
+    this.update()
+  }
+
+  deleteElement(educacion:any){
+    this.data = this.data.filter((elemento) => elemento != educacion);
+    this.update()
+  }
+
+  update(){
+    this.dataS.update(this.data,"educacion");
   }
 
 }

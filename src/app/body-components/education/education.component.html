@@ -1,18 +1,11 @@
 <section id="education">
-    <div class="container" *ngIf="data !== undefined && data.content !== undefined">
-        <h2>{{data.title}}</h2>
-        <div class="card mb-3" *ngFor="let card of data.content.cards" [id]="card.id" [ngClass]="{optional: card.optional === 'true'}">
-            <div class="card-header">
-              {{card.school}}
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">{{card.title}}</h5>
-              <p class="card-text">{{card.content}}</p>
-              <div *ngFor="let btn of card?.btns">
-                <a target="_blank" rel="noopener" [href]="btn.url" class="btn btn-primary">{{btn.title}}</a>
-                <p> </p>
-              </div>
-            </div>
-        </div>
+    <div class="container" *ngIf="data !== undefined && context !== undefined">
+        <h2>{{context.title}}</h2>
+
+        <app-add-section-btn [add]="addMode" (click)="addMode = !addMode" [texto]="'Añadir estudios'"></app-add-section-btn>
+
+        <app-add-education *ngIf="addMode && editMode" (adding)="addEvent($event)"></app-add-education>
+
+        <app-education-card *ngFor="let card of data" [card]="card" (deleteEvent)="deleteElement($event)" (updateEvent)="this.update()"></app-education-card>
     </div>
 </section>

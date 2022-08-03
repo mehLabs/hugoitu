@@ -10,7 +10,7 @@ export class SettingsComponent implements OnInit {
 
   width = window.innerWidth;
   lang = "spanish";
-  @Output() detallado = new EventEmitter();
+  @Output() detallado:EventEmitter<boolean> = new EventEmitter<boolean>();
   
   constructor() {
    }
@@ -21,9 +21,9 @@ export class SettingsComponent implements OnInit {
 
   check(resumir:boolean){
     if (resumir){
-      this.detallado.emit("true");
+      this.detallado.emit(true);
     }else{
-      this.detallado.emit("false");
+      this.detallado.emit(false);
     }
   }
 

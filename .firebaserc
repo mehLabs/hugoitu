@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "hugoiturrieta-fffd1"
+  },
+  "targets": {
+    "hugoiturrieta-fffd1": {
+      "hosting": {
+        "hugo-portfolio": [
+          "hugoiturrieta-fffd1"
+        ]
+      }
+    }
   }
 }

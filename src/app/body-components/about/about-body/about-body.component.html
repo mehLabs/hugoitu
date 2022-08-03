@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="d-flex card-body w-100" >
+      <p *ngIf="!editing">
+        {{data.content.p1}}
+      </p>
+      <textarea cols="100" rows="10" aria-label="Editar acerca de mí" *ngIf="editing" [(ngModel)]="data.content.p1"></textarea>
+      <app-edit-section-btn (editing)="editElement($event)"></app-edit-section-btn>
+    </div>
+  </div>

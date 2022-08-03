@@ -1,0 +1,61 @@
+<div class="card my-2" >
+    <div class="ms-auto end-0 d-flex"> <!--Edit and delete buttons-->
+        <app-edit-section-btn (editing)="editElement(proyecto)"></app-edit-section-btn>
+        <app-delete-section-btn (click)="deleteElement(proyecto)" ></app-delete-section-btn>
+    </div>
+    <div class="card-header">
+        <h3 *ngIf="!proyecto.edit">{{proyecto.title}}</h3>
+        <input *ngIf="proyecto.edit" [(ngModel)]="proyecto.title" placeholder="Título">
+    </div>
+
+    <a class="card-header" rel="noopener" target="_blank" [href]="proyecto.enlace" *ngIf="!proyecto.edit">
+        <img class="project" alt="project image" [src]="proyecto.img">
+        
+    </a>
+    <div *ngIf="proyecto.edit">
+        <div class="card-header d-flex justify-content-center align-items-center" >
+            <img class="project" alt="project image" [src]="proyecto.img">
+            <div class="btn-container position-absolute d-flex justify-content-center align-items-center">
+                <label [for]="'fileInput'+proyecto.id_proyecto">
+                  <div class="btn btn-primary rounded-circle">
+                    <i class="bi bi-pencil-square"></i>
+                  </div>
+                </label>
+                <input (change)="inputImage($event,proyecto)" accept="image/png, image/gif, image/jpeg" class="no-display" type="file" [id]="'fileInput'+proyecto.id_proyecto" name="filedata"/>
+            </div>  
+            
+
+        </div>
+        <div class="form-floating">
+            <input placeholder="Enlace" [(ngModel)]="proyecto.enlace" [id]="'proyectoUrl_'+proyecto.id_proyecto" class="form-control">
+            <label [for]="'proyectoUrl_'+proyecto.id_proyecto">Vínculo / URL</label>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <!--
+        <div class="tags" >
+            <div 
+            *ngFor="let tag of card.tags" 
+            class="tag" 
+            [ngClass]="{optional: tag.optional === 'true'}">
+                {{tag.title}}
+            </div>
+        </div>
+        -->
+        <br>
+        <p *ngIf="!proyecto.edit">
+            {{proyecto.description}}
+        </p>
+        <textarea class="w-100" rows="10" *ngIf="proyecto.edit" [(ngModel)]="proyecto.description" placeholder="Descripción"></textarea>
+        <!--
+        <div class="d-flex gap-2">
+            <div *ngFor="let link of card.links">
+                <a class="btn btn-primary" [href]="link.url">
+                    {{link.title}}
+                </a>
+            </div>
+        </div>
+        -->
+    </div>
+</div>

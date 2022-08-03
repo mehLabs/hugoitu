@@ -5,19 +5,12 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.profile-pic{
-  height: 200px;
-  width: auto;
-}
-.profile-frame{
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
+.background{
+  max-height: calc(100vh - 57px);
   overflow: hidden;
 }
 .profile-info{
   text-align: center;
-  width: 150px;
 }
 
 .container{

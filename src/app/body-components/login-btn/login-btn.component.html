@@ -1,6 +1,25 @@
-<div class="d-flex">
+<div>
 
-    <a routerLink="/login" class="btn btn-primary rounded d-flex border-0"><i class="bi bi-person"></i></a>
+    <a routerLink="/login" class="btn btn-primary rounded d-flex border-0" *ngIf="!logged"><i class="bi bi-person-fill"></i></a>
+    <div  class="d-flex flex-nowrap" *ngIf="logged">
+        <div class="dropdown">
+            <button 
+                type="button" 
+                title="Menú sesión" 
+                class="btn btn-primary rounded d-flex border-0"
+                id="profileDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+            > 
+                <i class="bi bi-person-check-fill"></i> 
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                <li><button type="button" class="dropdown-item" (click)="logout()">Cerrar Sesión</button></li>
+            </ul>
+        </div>
+        <app-save-all-btn></app-save-all-btn>
+        <app-edit-btn></app-edit-btn>
+    </div>
 </div>
 
 <!-- TODO: USE MY OWN AUTH INSTEAD OF AUTH0

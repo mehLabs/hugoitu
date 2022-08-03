@@ -1,0 +1,45 @@
+<div class="card mb-3"  [id]="'educacion_'+card.id_educacion" [ngClass]="{optional: card.optional === 'true'}">
+    <div class="position-absolute end-0 d-flex"> <!--Edit and delete buttons-->
+      <app-edit-section-btn [object]="card" (editing)="editElement($event)"></app-edit-section-btn>
+      <app-delete-section-btn [object]="card" (click)="deleteElement(card)"></app-delete-section-btn>
+    </div>
+    <div class="row g-0">
+      <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
+        <img class="p-1 m-auto img-fluid rounded-start" [src]="card.img" alt="" [ngClass]="{'img-filter': editing === true}">
+        <div class="btn-container position-absolute d-flex justify-content-center align-items-center" *ngIf="editing">
+            <label [for]="'fileInput'+card.id_educacion">
+              <div class="btn btn-primary rounded-circle">
+                <i class="bi bi-pencil-square"></i>
+              </div>
+            </label>
+            <input 
+              accept="image/png, image/gif, image/jpeg" 
+              (change)="inputImage($event,card)" 
+              class="no-display" 
+              aria-label="_" 
+              type="file" 
+              [id]="'fileInput'+card.id_educacion" 
+              name="filedata"
+            />
+        </div>
+      </div>
+      <div class="col-md-8 col-12">
+        <div class="card-body my-4">
+          
+          <div class="card-text"><small class="text-muted" *ngIf="!editing">{{card.escuela}}</small></div>
+          <textarea class="w-100" rows="1" aria-label="cambiar escuela" *ngIf="editing" [(ngModel)]="card.escuela"></textarea>
+
+          <h5 class="card-title" *ngIf="!editing">{{card.titulo}} | {{card.inicio}} - {{card.fin}}</h5>
+          <textarea class="w-100" aria-label="cambiar titulo" [(ngModel)]="card.titulo" *ngIf="editing"></textarea>
+
+          <p class="card-text" *ngIf="!editing">{{card.descripcion}}</p>
+          <textarea class="w-100" rows="5" aria-label="Editar contenido" [(ngModel)]="card.descripcion" *ngIf="editing" ></textarea>
+
+          <div *ngFor="let btn of card.btns">
+            <a target="_blank" rel="noopener" [href]="btn.url" class="btn btn-primary">{{btn.title}}</a>
+            <p> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

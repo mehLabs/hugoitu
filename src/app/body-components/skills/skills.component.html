@@ -1,9 +1,46 @@
 <section id="skills" *ngIf="data !== undefined && data.content !== undefined">
     <div class="container">
         <h2>{{data.title}}</h2>
-        <div class="card">
+        <div class="card shadow" *ngIf="categorias !== undefined && categorias !== null">
+            
+            <div *ngFor="let categoria of Object.keys(categorias); index as index">
+                <div class="card-header"> <h3>{{categoria}}</h3> </div>
+                <div class="position-relative" *ngFor="let tecnologia of categorias[categoria]" class="py-2">
+                    <div class="position-absolute end-0 me-4 d-flex"> <!--Edit and delete buttons-->
+                        <app-edit-section-btn (editing)="tecnologia.edit=$event ;editElement($event)"></app-edit-section-btn>
+                        <app-delete-section-btn (click)="deleteSkill(tecnologia)"></app-delete-section-btn>
+                    </div>
+                    <div class="py-2">
+                        <div *ngIf="!tecnologia.edit">
+                            <h4>
+                                <span>{{tecnologia.nombre}}</span> <span *ngIf="tecnologia.porcentaje >= 70"> 🌟</span> <span *ngIf="tecnologia.porcentaje <= 30"> 🐣</span>
+                            </h4>
+                            <div class="progress">
+                                <div [ngStyle]="{'width.%':tecnologia.porcentaje}" aria-label="conocimiento" class="progress-bar progress-bar-striped" role="progressbar" [attr.aria-valuenow]="tecnologia.porcentaje" aria-valuemin="0" aria-valuemax="100">{{tecnologia.porcentaje}}%</div>
+                            </div>
+                        </div>
+    
+                        <div *ngIf="tecnologia.edit">
+                            <input [(ngModel)]="tecnologia.nombre" placeholder="Nombre de la tecnologia">
+                            <input [(ngModel)]="tecnologia.porcentaje" placeholder="porcentaje de aprendizaje">
+                            <input [(ngModel)]="tecnologia.categoria" placeholder="Categoría de la tecnología">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div *ngIf="adding && editMode">
+                <hr>
+                <app-add-skill (newSkill)="newSkill($event)" [categorias]="Object.keys(categorias)"></app-add-skill>
+                <hr>
+            </div>
+
+            <app-add-section-btn [add]="adding" (adding)="addEvent($event)" class="shadow"></app-add-section-btn>
+            <!--
             <div class="card-header"><h3>{{data.content.p1}}</h3></div>
             <div class="card-body">
+
                 <h4>HTML 🌟</h4>
                 <div class="progress" id="bar">
                     <div class="progress-bar progress-bar-striped html" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="HTML">90%</div>
@@ -113,6 +150,7 @@
                     <div class="progress-bar progress-bar-striped english" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="English">77%</div>
                 </div>
             </div>
+        -->
         </div>
         
     </div>

@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css'; 
 body{
     background-color: var(--main-bg-color);
     overflow-x: hidden;
@@ -8,6 +7,10 @@ body{
 
 section{
     scroll-margin-top: 3rem;
+}
+
+.no-display{
+    display: none;
 }
 
 :root{
@@ -22,6 +25,10 @@ section{
     --card-bg: #fff;
     --font-color: black;
     --main-white-rgb: rgb(255,255,255);
+}
+
+.text-mc{
+    color: var(--font-color)
 }
 
 .bg-blanco{
@@ -45,3 +52,10 @@ section{
 h2{
     color:var(--font-color);
 }
+p{
+    white-space:pre-wrap;
+}
+.img-filter{
+    transition: 0.3s;
+    filter: sepia(100%) hue-rotate(190deg) saturate(500%) blur(2px);
+  }

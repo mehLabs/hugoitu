@@ -1,0 +1,66 @@
+
+.project, #pec{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.no-display{
+    display: none;
+}
+
+a{
+    text-decoration: underline;
+}
+
+.card-header{
+    overflow: hidden;
+    text-align: center;
+}
+
+.container .card .card-header{
+    background-color: transparent;
+}
+.container .card{
+    margin: 0 1rem;
+    max-width: 90vw;
+}
+
+
+.tags{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.tag{
+    padding: 0.1rem 0.75rem;
+    border-radius: 1.5rem;
+    background-color: var(--main-blue-color);
+    color:white
+}
+
+.optional{
+    display: none !important;
+}
+
+@media (min-width: 992px){
+
+
+    
+    #portfolio{
+        width: -webkit-fill-available;
+        height: 400px;
+        object-position: center;
+        object-fit:cover;
+    }
+
+    #pec{
+        width: auto;
+        height: 400px;
+        margin: 0 auto;
+        transform: rotate(30deg);
+        object-fit:contain;
+    }
+
+
+    
+}
