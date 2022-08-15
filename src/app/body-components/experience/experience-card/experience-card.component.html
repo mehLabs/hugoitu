@@ -1,6 +1,6 @@
 <div class="card" >
     <div class="position-absolute end-0 d-flex"> <!--Edit and delete buttons-->
-      <app-edit-section-btn (editing)="editElement(card)"></app-edit-section-btn>
+      <app-edit-section-btn (editing)="editElement($event)"></app-edit-section-btn>
       <app-delete-section-btn (click)="deleteElement(card)" ></app-delete-section-btn>
     </div>
     <div class="row g-0">
@@ -26,21 +26,21 @@
       <div class="col-md-8 col-12 py-4">
         <div class="card-body">
           <div class="card-text">
-            <small class="text-muted" *ngIf="!card.edit">{{card.empresa}}</small>
-            <div class="form-floating my-1" *ngIf="card.edit">
+            <small class="text-muted" *ngIf="!editing">{{card.empresa}}</small>
+            <div class="form-floating my-1" *ngIf="editing">
               <input class="form-control" [id]="'expEmpresa_'+card.id_experiencia_laboral" [(ngModel)]="card.empresa" aria-label="Editar empresa">
               <label [for]="'expEmpresa_'+card.id_experiencia_laboral">Empresa</label>
             </div>
           </div>
 
-          <h5 class="card-title" *ngIf="!card.edit">{{card.posicion}}</h5>
-          <div class="form-floating my-1" *ngIf="card.edit" >
+          <h5 class="card-title" *ngIf="!editing">{{card.posicion}}</h5>
+          <div class="form-floating my-1" *ngIf="editing" >
             <input [id]="'expPosicion_'+card.id_experiencia_laboral" class="form-control" [(ngModel)]="card.posicion" aria-label="Editar posición">
             <label [for]="'expPosicion_'+card.id_experiencia_laboral">Posición</label>
           </div>
 
-          <p class="card-text" *ngIf="!card.edit">{{card.inicio}} - {{card.fin}}</p>
-          <div class="row my-1" *ngIf="card.edit">
+          <p class="card-text" *ngIf="!editing">{{card.inicio}} - {{card.fin}}</p>
+          <div class="row my-1" *ngIf="editing">
             <div class="col-6 form-floating"> 
               <input [id]="'expInicio_'+card.id_experiencia_laboral" class="form-control" [(ngModel)]="card.inicio" aria-label="Editar inicio de la posición">
               <label [for]="'expInicio_'+card.id_experiencia_laboral">Inicio</label>
@@ -53,10 +53,10 @@
 
         </div>
         <div class="card-body">
-          <p class="card-text" *ngIf="!card.edit">
+          <p class="card-text" *ngIf="!editing">
               {{card.descripcion}}
           </p>
-          <div *ngIf="card.edit" class="my-1 d-flex">
+          <div *ngIf="editing" class="my-1 d-flex">
             <textarea class="w-100" [(ngModel)]="card.descripcion" aria-label="Editar descripción"></textarea>
           </div>
         </div>

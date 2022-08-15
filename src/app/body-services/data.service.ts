@@ -19,7 +19,7 @@ export class DataService implements OnInit{
   modified:boolean = false;
   saved: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  portfolio$:BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  portfolio$:BehaviorSubject<any> = new BehaviorSubject<any>([]);
 
   originalPortfolio:any;
 

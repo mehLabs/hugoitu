@@ -25,7 +25,7 @@ export class PortfolioComponent implements OnInit {
     })
 
     this.dataService.dlPortfolio().subscribe( (data) =>{
-      if (data !== null){
+      if (data !== null && data.persona !== undefined){
         this.loaded = true;
       }
     })

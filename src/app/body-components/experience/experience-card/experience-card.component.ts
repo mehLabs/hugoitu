@@ -15,6 +15,9 @@ export class ExperienceCardComponent implements OnInit {
   editing:boolean = false;
   editElement(isEditing:boolean){ //Inicia el proceso de editar un componente
     this.editing = isEditing;
+    if (!isEditing){
+      this.updateEvent.emit(true);
+    }
   }
   //
 
