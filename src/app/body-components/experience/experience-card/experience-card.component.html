@@ -1,10 +1,10 @@
-<div class="card" >
+<div class="card" *ngIf="!resumir || !card.opcional">
     <div class="position-absolute end-0 d-flex"> <!--Edit and delete buttons-->
       <app-edit-section-btn (editing)="editElement($event)"></app-edit-section-btn>
       <app-delete-section-btn (click)="deleteElement(card)" ></app-delete-section-btn>
     </div>
     <div class="row g-0">
-      <div class="col-md-4 col-12 d-flex justify-content-center align-items-center " [ngStyle]="{'background-color':'#'+card.color}">
+      <div class="col-md-4 col-12 d-flex justify-content-center align-items-center " [ngStyle]="{'background-color':card.color}">
         <img (change)="inputImage($event,card)" class="p-1 m-auto img-fluid rounded-start" [src]="card.img" alt="" [alt]="card.empresa + ' logo'">
         <div class="btn-container position-absolute d-flex justify-content-center align-items-center" *ngIf="editing">
             <label [for]="'fileInput'+card.id_educacion">

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FirebaseStorageService } from 'src/app/portfolio-services/firebase-storage.service';
+import { ResumeService } from 'src/app/portfolio-services/resume.service';
 
 @Component({
   selector: 'app-experience-card',
@@ -10,6 +11,7 @@ export class ExperienceCardComponent implements OnInit {
   @Input() card:any;
   @Output() updateEvent:EventEmitter<boolean> = new EventEmitter();
   @Output() deleteEvent:EventEmitter<boolean> = new EventEmitter();
+  resumir:boolean = false;
 
   // editing copy&pastle
   editing:boolean = false;
@@ -21,9 +23,12 @@ export class ExperienceCardComponent implements OnInit {
   }
   //
 
-  constructor(private firebaseStorage:FirebaseStorageService) { }
+  constructor(private firebaseStorage:FirebaseStorageService, private resumeService: ResumeService) { }
 
   ngOnInit(): void {
+    this.resumeService.getResumir().subscribe( (isResumir) =>{
+      this.resumir = isResumir;
+    })
   }
   
   deleteElement(event:any){

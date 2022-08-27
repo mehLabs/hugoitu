@@ -17,7 +17,7 @@ export class AddExperienceComponent implements OnInit {
     descripcion: "",
     inicio: "",
     fin: "",
-    opcional: 0,
+    opcional: false,
     posicion: "",
     color: "#ffffff",
     img: ""

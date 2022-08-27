@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/body-services/data.service';
+declare var bootstrap:any;
 
 @Component({
   selector: 'app-lang',
@@ -14,7 +15,8 @@ export class LangComponent implements OnInit {
   }
 
   toEnglish(){
-    this.dataService.toEnglish();
+    //SOON this.dataService.toEnglish();
+    alert("This option is not able yet! Coming soon.")
   }
 
   toSpanish(){
