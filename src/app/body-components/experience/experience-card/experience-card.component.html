@@ -1,4 +1,4 @@
-<div class="card" *ngIf="!resumir || !card.opcional">
+<div class="card mb-3" *ngIf="!resumir || !card.opcional">
     <div class="position-absolute end-0 d-flex"> <!--Edit and delete buttons-->
       <app-edit-section-btn (editing)="editElement($event)"></app-edit-section-btn>
       <app-delete-section-btn (click)="deleteElement(card)" ></app-delete-section-btn>
