@@ -19,7 +19,7 @@ export class HomeProfilePictureComponent implements OnInit {
   editElement(isEditing:boolean){ //Inicia el proceso de editar un componente
     this.editing = isEditing;
     if (!isEditing){
-      this.dataService.update(this.data,"perfil");
+      this.dataService.update(this.data,"persona");
     }
   }
   //
@@ -42,6 +42,8 @@ export class HomeProfilePictureComponent implements OnInit {
         image = this.firebaseStorage.uploadToFirebase(webpImage,event.target.files[0].name).then( (url) => {
           console.log(url);
           this.data.img_perfil = url;
+          this.dataService.update(this.data,"persona");
+
         });
       });
 
