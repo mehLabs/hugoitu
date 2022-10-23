@@ -1,4 +1,4 @@
-<section id="projects">
+<section id="projects" class="component">
     <div class="container" *ngIf="data !== undefined">
         <h2>{{data.title}}</h2>
         <app-add-section-btn class="my-2" [texto]="'Añadir proyecto'" (click)="addMode = !addMode" ></app-add-section-btn>

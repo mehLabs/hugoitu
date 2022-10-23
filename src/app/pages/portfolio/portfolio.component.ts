@@ -19,6 +19,7 @@ export class PortfolioComponent implements OnInit {
 
   constructor(private dataService:DataService) { }
 
+
   ngOnInit(): void {
     this.dataService.getLoading().subscribe((isLoading:boolean) => {
       this.uploading = isLoading;
@@ -30,6 +31,22 @@ export class PortfolioComponent implements OnInit {
       }
     })
     
+    setTimeout(() => {
+      let componentes = document.getElementsByClassName("component");
+      componentes.item(0)?.classList.add("show")
+      
+      for(let i=1;i<componentes.length;i++){
+        let activado = true;
+        let componente:Element = componentes.item(i) || new Element;
+        window.addEventListener("scroll", () => {
+          if (window.innerHeight - 200 >= componente.children[0].getBoundingClientRect().top && activado){
+            activado = false;
+            componente.classList.add("show")
+          }
+        });
+      }
+      
+    }, 500);
   }
 
   

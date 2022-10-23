@@ -54,6 +54,7 @@ import { EducationCardComponent } from './body-components/education/education-ca
 import { ExperienceCardComponent } from './body-components/experience/experience-card/experience-card.component';
 import { ProjectsCardComponent } from './body-components/projects/projects-card/projects-card.component';
 import { UploadingSpinnerComponent } from './body-components/uploading-spinner/uploading-spinner.component';
+import { VideoComponent } from './body-components/home/video/video.component';
 
 
 @NgModule({
@@ -98,7 +99,8 @@ import { UploadingSpinnerComponent } from './body-components/uploading-spinner/u
     EducationCardComponent,
     ExperienceCardComponent,
     ProjectsCardComponent,
-    UploadingSpinnerComponent
+    UploadingSpinnerComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

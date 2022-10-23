@@ -118,5 +118,8 @@
       }
     }
   },
-  "defaultProject": "hugo-portfolio"
+  "defaultProject": "hugo-portfolio",
+  "cli": {
+    "analytics": false
+  }
 }
