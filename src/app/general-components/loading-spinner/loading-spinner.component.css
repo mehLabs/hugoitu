@@ -1,5 +1,6 @@
 .text-info{
     font-size: 5rem;
+    color:var(--main-blue-color)
 }
 .pantalla{
     position: fixed;

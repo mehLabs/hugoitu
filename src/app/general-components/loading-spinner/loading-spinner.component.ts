@@ -10,7 +10,12 @@ export class LoadingSpinnerComponent implements OnInit {
 
   constructor() { }
 
+  tardando=false;
+
   ngOnInit(): void {
+    setTimeout(() => {
+      this.tardando=true;
+    }, 5000);
   }
 
 }

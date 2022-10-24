@@ -2,7 +2,7 @@
     <div class="spinner-border text-info" role="status">
         <span class="visually-hidden">Loading...</span>
     </div>
-    <div class="mt-4">
-        <h2>Despertando servidor (puede demorar unos pocos segundos)</h2>
+    <div class="mt-4" *ngIf="tardando">
+        <h2>Si demora mucho es porque el servidor se está despertando de su siesta. Aguarde un ratito más.</h2>
     </div>
 </div>
