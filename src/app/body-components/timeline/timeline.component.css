@@ -116,7 +116,7 @@ li h3::before{
     .card-header{
         display: block;
         text-align: center;
-        background-color: white;
+        background-color: var(--main-bg-color);
     }
     #collapseTimeline{
         transition: .5s;
