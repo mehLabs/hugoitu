@@ -107,7 +107,9 @@ nav .navbar-nav{
     }
 }
 @media (max-width:495px){
-    .space{
-        height: 98px;
+    .navbar-brand{
+        width: 40px;
+        overflow: hidden;
+        margin-right: 0;
     }
 }

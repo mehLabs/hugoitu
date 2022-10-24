@@ -20,3 +20,11 @@ a{
     }
     
 }
+@media (max-width:375px) {
+    .btn{
+        padding: .375rem 0.5rem;
+    }
+    .border-end-1{
+        padding-right: 0;
+    }
+}

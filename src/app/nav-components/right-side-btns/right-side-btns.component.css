@@ -7,3 +7,8 @@
 .botones-der{
     justify-content: flex-end;
 }
+@media (max-width:375px) {
+    .grupo-start{
+        margin-right:0;
+    }
+}
