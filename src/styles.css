@@ -14,16 +14,17 @@ section{
 }
 
 :root{
-    --main-bg-color: rgb(255, 255, 255);
-    --main-blue-color: rgb(118, 146, 235);
-    --main-dark-color: rgb(37, 34, 34);
+    --main-bg-color: #FCA311;
+    --main-color:#FCA311;
+    --main-blue-color: #14213D;
+    --main-dark-color: #FFFFFF;
     --main-blue-shadow: rgba(82, 101, 163, 0.507);
     --highlight-color: rgb(255, 255, 255);
     --highlight-border: rgb(255, 255, 255);
     --bs-body-font-family: Helvetica;
     --test-color: rgb(112, 112, 112);
-    --card-bg: #fff;
-    --font-color: black;
+    --card-bg: #14213D;
+    --font-color: #E5E5E5;
     --main-white-rgb: rgb(255,255,255);
 }
 

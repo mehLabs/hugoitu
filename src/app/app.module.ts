@@ -55,6 +55,7 @@ import { ExperienceCardComponent } from './body-components/experience/experience
 import { ProjectsCardComponent } from './body-components/projects/projects-card/projects-card.component';
 import { UploadingSpinnerComponent } from './body-components/uploading-spinner/uploading-spinner.component';
 import { VideoComponent } from './body-components/home/video/video.component';
+import { ContactFormComponent } from './body-components/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { VideoComponent } from './body-components/home/video/video.component';
     ExperienceCardComponent,
     ProjectsCardComponent,
     UploadingSpinnerComponent,
-    VideoComponent
+    VideoComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

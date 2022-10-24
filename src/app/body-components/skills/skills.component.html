@@ -1,7 +1,7 @@
 <section class="component" id="skills" *ngIf="data !== undefined && data.content !== undefined">
     <div class="container">
         <h2>{{data.title}}</h2>
-        <div class="card shadow" *ngIf="categorias !== undefined && categorias !== null">
+        <div class="card" *ngIf="categorias !== undefined && categorias !== null">
             
             <div *ngFor="let categoria of Object.keys(categorias); index as index">
                 <div class="card-header"> <h3>{{categoria}}</h3> </div>

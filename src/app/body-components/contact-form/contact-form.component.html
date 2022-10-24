@@ -1,0 +1,61 @@
+<div class="form-body container">
+  <div class="row">
+      <div class="form-holder">
+          <div class="form-content">
+              <div class="form-items">
+                <ng-container *ngIf="!success">
+
+                  <h3>Contácteme</h3>
+                  <p>Le responderé dentro de las 24hs.</p>
+                  <form class="requires-validation" [formGroup]="messageToSend"  (ngSubmit)="submit($event)" method="POST">
+
+                      <div class="col-md-12">
+                         <input class="form-control" type="text" name="name" formControlName="name" placeholder="Nombre" required>
+                         <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+                      </div>
+
+                      <div class="col-md-12">
+                          <input class="form-control" type="email" name="_replyto" formControlName="_replyto" placeholder="Correo electrónico" required>
+                           <div class="invalid-feedback">Por favor, ingrese su correo.</div>
+                      </div>
+
+                     <div class="col-md-12">
+                          <select class="form-select mt-3" formControlName="address">
+                                <option selected disabled value="">Posición</option>
+                                <option value="frontend">Frontend Developer</option>
+                                <option value="backend">Backend Developer</option>
+                                <option value="fullstack">FullStack Developer</option>
+                         </select>
+                          <div class="invalid-feedback">Por favor, seleccione una posición.</div>
+                     </div>
+
+                      <div class="col-md-12 mt-3">
+                        <textarea placeholder="Su mensaje" class="form-control" formControlName="message" name="text"></textarea>
+                      </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="_optin" id="invalidCheck" required>
+                    <label for="invalidCheck" class="form-check-label">Estoy interesado en trabajar con Iturrieta.</label>
+                  </div>
+            
+
+                      <div class="form-button mt-3">
+                          <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
+                          <div class="spinner-border text-info" role="status" *ngIf="loading">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
+                  </form>
+                </ng-container>
+                <div [ngClass]="success ? 'show':'hide'">
+                  <h3>Formulario enviado con éxito.</h3>
+                  <p>Muchas gracias.</p>
+                  <div class="w-100 d-flex justify-content-center">
+                    <i class="bi bi-check-lg"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
