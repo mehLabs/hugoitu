@@ -26,9 +26,13 @@
             
 
         </div>
-        <div class="form-floating">
+        <div class="form-floating mb-3">
             <input placeholder="Enlace" [(ngModel)]="proyecto.enlace" [id]="'proyectoUrl_'+proyecto.id_proyecto" class="form-control">
-            <label [for]="'proyectoUrl_'+proyecto.id_proyecto">Vínculo / URL</label>
+            <label class="text-black" [for]="'proyectoUrl_'+proyecto.id_proyecto">Vínculo / URL</label>
+        </div>
+        <div class="form-floating">
+            <input placeholder="Link de Github" [(ngModel)]="proyecto.github" [id]="'proyectoGithub_'+proyecto.id_proyecto" class="form-control" />
+            <label class="text-black" [for]="'proyectoGithub_'+proyecto.id_proyecto">Línk de Github</label>
         </div>
     </div>
 
@@ -44,10 +48,18 @@
         </div>
         -->
         <br>
-        <p *ngIf="!proyecto.edit">
-            {{proyecto.description}}
-        </p>
-        <textarea class="w-100" rows="10" *ngIf="proyecto.edit" [(ngModel)]="proyecto.description" placeholder="Descripción"></textarea>
+        <ng-container *ngIf="!proyecto.edit">
+            <p>
+                {{proyecto.description}}
+            </p>
+            <div class="d-flex justify-content-center gap-4">
+                <a [href]="proyecto.github" target="_blank" rel="noopener" class="btn btn-primary text-decoration-none"><i class="bi bi-github"></i> Github</a>
+                <a [href]="proyecto.enlace" target="_blank" rel="noopener" class="btn btn-primary text-decoration-none"><i class="bi bi-box-arrow-up-right"></i> Website</a>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="proyecto.edit">
+            <textarea class="w-100" rows="10" [(ngModel)]="proyecto.description" placeholder="Descripción"></textarea>
+        </ng-container>
         <!--
         <div class="d-flex gap-2">
             <div *ngFor="let link of card.links">
