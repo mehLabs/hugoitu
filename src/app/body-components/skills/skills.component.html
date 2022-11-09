@@ -16,7 +16,7 @@
                                 <span>{{tecnologia.nombre}}</span> <span *ngIf="tecnologia.porcentaje >= 70"> 🌟</span> <span *ngIf="tecnologia.porcentaje <= 30"> 🐣</span>
                             </h4>
                             <div class="progress">
-                                <div [ngStyle]="{'width.%':tecnologia.porcentaje}" aria-label="conocimiento" class="progress-bar progress-bar-striped" role="progressbar" [attr.aria-valuenow]="tecnologia.porcentaje" aria-valuemin="0" aria-valuemax="100">{{tecnologia.porcentaje}}%</div>
+                                <div [ngStyle]="{'width.%':tecnologia.porcentaje}" aria-label="conocimiento" class="progress-bar progress-bar-striped text-black text-end px-2" role="progressbar" [attr.aria-valuenow]="tecnologia.porcentaje" aria-valuemin="0" aria-valuemax="100">{{tecnologia.porcentaje}}%</div>
                             </div>
                         </div>
     
@@ -37,120 +37,6 @@
             </div>
 
             <app-add-section-btn [add]="adding" (adding)="addEvent($event)" class="shadow"></app-add-section-btn>
-            <!--
-            <div class="card-header"><h3>{{data.content.p1}}</h3></div>
-            <div class="card-body">
-
-                <h4>HTML 🌟</h4>
-                <div class="progress" id="bar">
-                    <div class="progress-bar progress-bar-striped html" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="HTML">90%</div>
-                </div>
-                <h4>CSS 🌟</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped css" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="CSS">75%</div>
-                </div>
-                <h4>Javascript 🌟</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped javascript" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Javascript">55%</div>
-                </div>
-                <h4 class="optional">JSON</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped json" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="JSON">75%</div>
-                </div>
-                <h4>Bootstrap</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped bootstrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Bootstrap">50%</div>
-                </div>
-                <h4 class="optional">Python</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped python" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Python">30%</div>
-                </div>
-                <h4 class="optional">Maven</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped maven" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Maven">10%</div>
-                </div>
-                <h4 class="optional">Auth0</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped auth0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Auth0">45%</div>
-                </div>
-            </div>
-            <div class="card-header"><h3>{{data.content.p2}}</h3></div>
-            <div class="card-body">
-                <h4 class="optional">Typescript</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped typescript" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Typescript">45%</div>
-                </div>
-                <h4>Angular 🌟</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped angular" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Angular">60%</div>
-                </div>
-                <h4 class="optional">Http requests</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped http-requests" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Http requests">80%</div>
-                </div>
-                <h4>GIT</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped git" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="GIT">40%</div>
-                </div>
-                <h4>Servlets</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped servlets" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Servlets">45%</div>
-                </div>
-                <h4 class="optional">Tomcat</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped tomcat" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Tomcat">10%</div>
-                </div>
-                <h4 class="optional">Sockets</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped sockets" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Sockets">5%</div>
-                </div>
-                <h4>APIRest</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped apirest" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Apirest">35%</div>
-                </div>
-                <h4 class="optional">Ruby</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped ruby" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Ruby">45%</div>
-                </div>
-                <h4>MySQL</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped mysql" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="MySQL">60%</div>
-                </div>
-                <h4>Spring Boot</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped spring-boot" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Spring Boot">40%</div>
-                </div>
-                <h4 class="optional">Firebase</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped firebase" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Firebase">35%</div>
-                </div>
-                <h4 class="optional">Heroku</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped heroku" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Heroku">35%</div>
-                </div>
-            </div>
-            <div class="card-header"><h3>{{data.content.p3}}</h3></div>
-            <div class="card-body">
-                <h4 class="optional">Pascal</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped pascal" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Pascal">40%</div>
-                </div>
-                <h4>Java</h4>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped java" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Java">60%</div>
-                </div>
-                <h4 class="optional">{{data.content.p4}} 🌟</h4>
-                <div class="progress optional">
-                    <div class="progress-bar progress-bar-striped programacion-orientada-objetos" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="Programacion Orientada a Objetos">75%</div>
-                </div>
-            </div>
-            <div class="card-header"><h3>English 🌟</h3></div>
-            <div class="card-body">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped english" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" title="English">77%</div>
-                </div>
-            </div>
-        -->
         </div>
         
     </div>

@@ -13,17 +13,18 @@ section{
     display: none;
 }
 
+
 :root{
-    --main-bg-color: #FCA311;
-    --main-color:#FCA311;
-    --main-blue-color: #14213D;
+    --main-bg-color: #2A9D8F;
+    --main-color:#2A9D8F;
+    --main-blue-color: #264653;
     --main-dark-color: #FFFFFF;
-    --main-blue-shadow: rgba(82, 101, 163, 0.507);
-    --highlight-color: rgb(255, 255, 255);
-    --highlight-border: rgb(255, 255, 255);
+    --main-blue-shadow: rgba(38, 70, 83, 0.507);
+    --highlight-color: #F4A261;
+    --highlight-border: #F4A261;
     --bs-body-font-family: Helvetica;
     --test-color: rgb(112, 112, 112);
-    --card-bg: #14213D;
+    --card-bg: #264653;
     --font-color: #E5E5E5;
     --main-white-rgb: rgb(255,255,255);
 }
@@ -39,12 +40,21 @@ section{
     background-color: var(--main-blue-color);
 }
 .btn-primary{
-    background-color: var(--main-blue-color)
+    background-color: var(--main-blue-color);
+    border-color: var(--highlight-border);
+}
+.btn-primary:hover{
+    background-color: var(--main-color);
+    border-color:var(--highlight-border)
+}
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    background-color: var(--highlight-color);
 }
 .card{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.425);
     background-color: var(--card-bg);
     color: var(--font-color);
+    border-color: var(--highlight-border);
 }
 .accordion-button {
     background-color: var(--card-bg);

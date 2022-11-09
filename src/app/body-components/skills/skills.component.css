@@ -16,83 +16,6 @@ h2{
 .container{
     padding: 1rem;
 }
-
-.html{
-    width: 90%;
-}
-.css{
-    width: 75%;
-}
-.javascript{
-    width: 55%;
-}
-.json{
-    width: 75%;
-}
-.bootstrap{
-    width: 50%;
-}
-.python{
-    width: 30%;
-}
-.maven{
-    width: 10%;
-}
-.auth0{
-    width: 45%;
-}
-.typescript{
-    width: 45%;
-}
-.angular{
-    width: 60%;
-}
-.http-requests{
-    width: 80%;
-}
-.git{
-    width: 40%;
-}
-.servlets{
-    width: 45%;
-}
-.tomcat{
-    width: 10%;
-}
-.sockets{
-    width: 5%;
-}
-.apirest{
-    width: 35%;
-}
-.ruby{
-    width: 45%;
-}
-.mysql{
-    width: 60%;
-}
-.spring-boot{
-    width: 40%;
-}
-.firebase{
-    width: 35%;
-}
-.heroku{
-    width: 35%;
-}
-.pascal{
-    width: 40%;
-}
-.java{
-    width: 60%;
-}
-.programacion-orientada-objetos{
-    width: 75%;
-}
-.english{
-    width: 77%;
-}
-
 .progress{
     display: flex;
     height: 1.5rem;
@@ -100,7 +23,7 @@ h2{
 }
 
 .progress-bar{
-    background-color:  var(--main-blue-color)
+    background-color:  var(--highlight-border)
 }
 
 .progress.optional{

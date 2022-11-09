@@ -149,6 +149,9 @@
     opacity: 0;
     transform: translateY(15px);
 }
+.highlight{
+    background-color: var(--highlight-color);
+}
 
 @media (max-width:375px) {
     .form-holder .form-content {

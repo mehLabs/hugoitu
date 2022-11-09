@@ -2,49 +2,53 @@
   <div class="row">
       <div class="form-holder">
           <div class="form-content">
-              <div class="form-items">
+              <div class="form-items" [ngClass]="success ? 'highlight' : ''">
                 <ng-container *ngIf="!success">
 
                   <h3>Contácteme</h3>
                   <p>Le responderé dentro de las 24hs.</p>
                   <form class="requires-validation" [formGroup]="messageToSend"  (ngSubmit)="submit($event)" method="POST">
 
-                      <div class="col-md-12">
-                         <input class="form-control" type="text" name="name" formControlName="name" placeholder="Nombre" required>
-                         <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+                      <div class="col-md-12 form-group" >
+                         <input  class="form-control" type="text" name="name" formControlName="name" placeholder="Nombre" required>
+                         <div *ngIf="(formControls['name'].touched) && formControls['name'].errors?.['required']" class="text-warning">Por favor, ingrese su nombre.</div>
                       </div>
 
                       <div class="col-md-12">
                           <input class="form-control" type="email" name="_replyto" formControlName="_replyto" placeholder="Correo electrónico" required>
-                           <div class="invalid-feedback">Por favor, ingrese su correo.</div>
+                           <div class="text-warning" *ngIf="(formControls['_replyto'].touched) && formControls['_replyto'].errors">Por favor, ingrese un correo electrónico válido.</div>
                       </div>
 
                      <div class="col-md-12">
-                          <select class="form-select mt-3" formControlName="address">
+                          <select class="form-select mt-3" formControlName="address" required>
                                 <option selected disabled value="">Posición</option>
                                 <option value="frontend">Frontend Developer</option>
                                 <option value="backend">Backend Developer</option>
                                 <option value="fullstack">FullStack Developer</option>
                          </select>
-                          <div class="invalid-feedback">Por favor, seleccione una posición.</div>
+                         <div class="text-warning" *ngIf="(formControls['address'].touched) && formControls['address'].errors">Por favor, seleccione una posición</div>
                      </div>
 
                       <div class="col-md-12 mt-3">
-                        <textarea placeholder="Su mensaje" class="form-control" formControlName="message" name="text"></textarea>
+                        <textarea placeholder="Su mensaje" class="form-control" formControlName="message" name="text" required></textarea>
+                        <div class="text-warning" *ngIf="(formControls['message'].touched) && formControls['message'].errors">Por favor, ingrese un mensaje</div>
                       </div>
 
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" formControlName="_optin" id="invalidCheck" required>
+                    <input class="form-check-input" type="checkbox" formControlName="_optin" id="invalidCheck">
                     <label for="invalidCheck" class="form-check-label">Estoy interesado en trabajar con Iturrieta.</label>
                   </div>
             
 
-                      <div class="form-button mt-3">
-                          <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
-                          <div class="spinner-border text-info" role="status" *ngIf="loading">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                      </div>
+                  <div class="form-button mt-3">
+                      <button id="submit" type="submit" class="btn btn-primary" [disabled]="!messageToSend.valid">Enviar</button>
+                      <div class="spinner-border text-info" role="status" *ngIf="loading">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+
+                  <span class="text-warning" *ngIf="!messageToSend.valid">Por favor, complete todos los campos.</span>
+
                   </form>
                 </ng-container>
                 <div [ngClass]="success ? 'show':'hide'">

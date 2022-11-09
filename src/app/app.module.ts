@@ -56,6 +56,7 @@ import { ProjectsCardComponent } from './body-components/projects/projects-card/
 import { UploadingSpinnerComponent } from './body-components/uploading-spinner/uploading-spinner.component';
 import { VideoComponent } from './body-components/home/video/video.component';
 import { ContactFormComponent } from './body-components/contact-form/contact-form.component';
+import { DownloadBtnComponent } from './body-components/download-btn/download-btn.component';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ import { ContactFormComponent } from './body-components/contact-form/contact-for
     ProjectsCardComponent,
     UploadingSpinnerComponent,
     VideoComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    DownloadBtnComponent
   ],
   imports: [
     BrowserModule,
