@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { DataService } from 'src/app/body-services/data.service';
 import { ScrollSpyService } from 'src/app/body-services/scroll-spy.service';
 import { EditService } from 'src/app/portfolio-services/edit.service';
+import { FirebaseStorageService } from 'src/app/portfolio-services/firebase-storage.service';
 
 @Component({
   selector: 'app-skills',
@@ -26,9 +27,17 @@ export class SkillsComponent implements OnInit {
   editElement(isEditing:boolean){ //Inicia el proceso de editar un componente
     if (!isEditing){
       this.categorias = this.agrupar(this.portfolio);
+      this.dataS.update(this.portfolio,"tecnologias")
+
     }
   }
   //
+
+  async inputImage(file:Event,obj:any){
+    obj.img = '';
+    this.firebase.inputImage(file,obj);
+
+  }
 
   categorias:any;
 
@@ -36,6 +45,7 @@ export class SkillsComponent implements OnInit {
 
   constructor(
     private dataS: DataService, 
+    private firebase:FirebaseStorageService,
     private scroll:ScrollSpyService,
     private editService:EditService
     ) {
@@ -148,5 +158,7 @@ export class SkillsComponent implements OnInit {
     this.portfolio = this.portfolio.filter( (oSkill) => oSkill != skill);
     this.categorias = this.agrupar(this.portfolio);
   }
+
+
 }
 

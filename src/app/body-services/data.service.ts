@@ -112,6 +112,7 @@ export class DataService implements OnInit{
   }
 
   update(data:any,key:string){
+    console.log(this.savedData)
     this.savedData = {
       ...this.savedData,
       [key]:data

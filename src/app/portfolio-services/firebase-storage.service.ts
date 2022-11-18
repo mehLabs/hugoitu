@@ -19,6 +19,24 @@ export class FirebaseStorageService {
 
   constructor() { }
 
+  inputImage(file:any,img:any){
+      if (file.target.files.length > 0){
+        let src = URL.createObjectURL(file.target.files[0]);
+  
+        let image;
+        //Convert image to canvas
+        //this.firebaseStorage.convertToWebP(src).then(webpImage => this.data.img_perfil = webpImage);
+        this.convertToWebP(src).then(webpImage => {
+          image = this.uploadToFirebase(webpImage,file.target.files[0].name).then( (url) => {
+            img.img = url;
+          });
+        });
+  
+        
+  
+      }
+  }
+
   convertToWebP(src:any):Promise<any>{
     console.log(src);
 

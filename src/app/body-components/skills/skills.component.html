@@ -5,28 +5,38 @@
             
             <div *ngFor="let categoria of Object.keys(categorias); index as index">
                 <div class="card-header"> <h3>{{categoria}}</h3> </div>
-                <div class="position-relative" *ngFor="let tecnologia of categorias[categoria]" class="py-2">
-                    <div class="position-absolute end-0 me-4 d-flex"> <!--Edit and delete buttons-->
-                        <app-edit-section-btn (editing)="tecnologia.edit=$event ;editElement($event)"></app-edit-section-btn>
-                        <app-delete-section-btn (click)="deleteSkill(tecnologia)"></app-delete-section-btn>
-                    </div>
-                    <div class="py-2">
-                        <div *ngIf="!tecnologia.edit">
-                            <h4>
-                                <span>{{tecnologia.nombre}}</span> <span *ngIf="tecnologia.porcentaje >= 70"> 🌟</span> <span *ngIf="tecnologia.porcentaje <= 30"> 🐣</span>
-                            </h4>
-                            <div class="progress">
-                                <div [ngStyle]="{'width.%':tecnologia.porcentaje}" aria-label="conocimiento" class="progress-bar progress-bar-striped text-black text-end px-2" role="progressbar" [attr.aria-valuenow]="tecnologia.porcentaje" aria-valuemin="0" aria-valuemax="100">{{tecnologia.porcentaje}}%</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="position-relative" *ngFor="let tecnologia of categorias[categoria]" class="py-2 col-4">
+                            <div class="end-0 me-4 d-flex"> <!--Edit and delete buttons-->
+                                <app-edit-section-btn (editing)="tecnologia.edit=$event ;editElement($event)"></app-edit-section-btn>
+                                <app-delete-section-btn (click)="deleteSkill(tecnologia)"></app-delete-section-btn>
                             </div>
-                        </div>
-    
-                        <div *ngIf="tecnologia.edit">
-                            <input [(ngModel)]="tecnologia.nombre" placeholder="Nombre de la tecnologia">
-                            <input [(ngModel)]="tecnologia.porcentaje" placeholder="porcentaje de aprendizaje">
-                            <input [(ngModel)]="tecnologia.categoria" placeholder="Categoría de la tecnología">
+                            <div class="py-2">
+                                <div *ngIf="!tecnologia.edit">
+                                    <img class="tecnologia-img" *ngIf="tecnologia.img" aria-label="logo" [src]="tecnologia.img" [title]="tecnologia.nombre+' logo'">
+                                    <h4>
+                                        <span>{{tecnologia.nombre}}</span> <span *ngIf="tecnologia.porcentaje >= 70"> 🌟</span> <span *ngIf="tecnologia.porcentaje <= 30"> 🐣</span>
+                                    </h4>
+                                    <!-- <div class="progress">
+                                        <div [ngStyle]="{'width.%':tecnologia.porcentaje}" aria-label="conocimiento" class="progress-bar progress-bar-striped text-black text-end px-2" role="progressbar" [attr.aria-valuenow]="tecnologia.porcentaje" aria-valuemin="0" aria-valuemax="100">{{tecnologia.porcentaje}}%</div>
+                                    </div> -->
+                                </div>
+            
+                                <div *ngIf="tecnologia.edit">
+                                    <input [(ngModel)]="tecnologia.nombre" placeholder="Nombre de la tecnologia">
+                                    <input [(ngModel)]="tecnologia.porcentaje" placeholder="porcentaje de aprendizaje">
+                                    <input [(ngModel)]="tecnologia.categoria" placeholder="Categoría de la tecnología">
+                                    <input [(ngModel)]="tecnologia.img" placeholder="Imagen de la tecnología">
+                                    <div class="my-1">
+                                        <label for="formFile" class="form-label">Ingresa una imagen para tu proyecto</label>
+                                        <input (change)="inputImage($event,tecnologia)" class="form-control" type="file" id="formFile">
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
-                    
                 </div>
             </div>
 

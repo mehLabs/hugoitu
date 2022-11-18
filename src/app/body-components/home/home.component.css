@@ -6,7 +6,7 @@
   justify-content: center;
 }
 .background{
-  max-height: calc(100vh - 57px);
+  max-height: calc(75vh - 57px);
   overflow: hidden;
 }
 .profile-info{

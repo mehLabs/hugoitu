@@ -71,7 +71,7 @@ nav .navbar-nav{
 }
 
 .navbar-brand img{
-    max-height: 30px;
+    max-height: 50px;
 }
 .navbar-brand img.invert{
     filter: invert(100%);
@@ -104,12 +104,5 @@ nav .navbar-nav{
 @media (min-width:1150px){
     .nav-item a{
         width: auto;
-    }
-}
-@media (max-width:495px){
-    .navbar-brand{
-        width: 40px;
-        overflow: hidden;
-        margin-right: 0;
     }
 }
