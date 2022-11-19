@@ -17,7 +17,7 @@ export const environment = {
   production: false,
   
   dev: {
-    serverUrl:"https://hugoitu.herokuapp.com", //serverUrl:"https://hugoitu.herokuapp.com",
+    serverUrl:"https://hugoitubackend-production.up.railway.app", //serverUrl:"https://hugoitu.herokuapp.com",
     localUrl:"http://localhost:7000"
   }
 };

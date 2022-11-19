@@ -13,6 +13,6 @@ export const environment = {
   production: true,
 
   dev: {
-    serverUrl:"https://hugoitu.herokuapp.com", //serverUrl:"https://hugoitu.herokuapp.com",
+    serverUrl:"hhttps://hugoitubackend-production.up.railway.app", //serverUrl:"https://hugoitu.herokuapp.com",
   }
 }
